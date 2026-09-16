@@ -1,0 +1,66 @@
+# ============================================
+# robots.txt — Mèfinlo Ghouse
+# Site : https://www.mghabomey.com
+# Conçu par Frédy Amoussou
+# ============================================
+
+# Autoriser tous les robots (Google, Bing, etc.)
+User-agent: *
+
+# Autoriser tout le contenu du site
+Allow: /
+
+# Interdire les fichiers internes inutiles à l'indexation
+Disallow: /*.json$
+Disallow: /*.xml$?*           # Éviter les paramètres de requête XML
+Disallow: /404.html
+Disallow: /500.html
+
+# Interdire les dossiers sensibles potentiels
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
+
+# Interdire le suivi des URL avec paramètres (évite le contenu dupliqué)
+Disallow: /*?utm_
+Disallow: /*?ref=
+Disallow: /*?sessionid=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+
+# ===== Robots spécifiques =====
+# Googlebot — crawl complet autorisé
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Googlebot-Image — autoriser les images
+User-agent: Googlebot-Image
+Allow: /
+
+# Bingbot — crawl autorisé
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquer les scrapers malveillants connus
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ===== Sitemaps =====
+Sitemap: https://www.mghabomey.com/sitemap.xml
+
+# ============================================
+# Fin du fichier robots.txt
+# ============================================
