@@ -18,6 +18,7 @@
 <meta property="og:image" content="https://www.mghabomey.com/photo1.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1a3d2e">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23ff6b81'/%3E%3Ctext x='50' y='65' font-size='55' text-anchor='middle' fill='white'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,22 +38,14 @@
   "openingHours": "Mo-Su 00:00-23:59"
 }
 </script>
-
 <style>
-/* ========== RESET & VARIABLES ========== */
 :root{
-  --primary:#ff6b81;
-  --primary-10:rgba(255,107,129,.1);
-  --secondary:#2f8f56;
-  --secondary-10:rgba(47,143,86,.1);
-  --dark:#1a1a1a;
-  --bg-light:#faf8f5;
-  --bg-warm:#fef9f3;
-  --text-gray:#666;
-  --footer-dark:#1a3d2e;
-  --yellow:#facc15;
-  --radius:1rem;
-  --radius-lg:1.5rem;
+  --primary:#ff6b81;--primary-10:rgba(255,107,129,.1);
+  --secondary:#2f8f56;--secondary-10:rgba(47,143,86,.1);
+  --wa-green:#25D366;--wa-green-dark:#128C7E;
+  --dark:#1a1a1a;--bg-light:#faf8f5;--bg-warm:#fef9f3;
+  --text-gray:#666;--footer-dark:#1a3d2e;--yellow:#facc15;
+  --radius:1rem;--radius-lg:1.5rem;
   --shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
   --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);
   --shadow-xl:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);
@@ -61,15 +54,13 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.5;color:var(--dark);background:#fff;overflow-x:hidden}
-img,video,iframe{max-width:100%;display:block;vertical-align:middle}
+img,video,iframe,svg{max-width:100%;display:block;vertical-align:middle}
 a{color:inherit;text-decoration:none;transition:color .2s}
 button,input,select,textarea{font:inherit;color:inherit}
 button{background:none;border:none;cursor:pointer}
 ul{list-style:none}
 h1,h2,h3,h4,p{margin:0}
 :disabled{cursor:default}
-
-/* ========== LAYOUT ========== */
 .container{max-width:1200px;margin:0 auto;padding:0 1rem}
 @media(min-width:640px){.container{padding:0 1.5rem}}
 @media(min-width:1024px){.container{padding:0 3rem}}
@@ -88,8 +79,6 @@ h1,h2,h3,h4,p{margin:0}
 @media(min-width:640px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr);gap:2rem}}
 @media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}
 .text-center{text-align:center}
-
-/* ========== HEADER ========== */
 header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,26,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#fff;transition:all .3s}
 header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:4rem}
@@ -109,14 +98,12 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .menu-toggle:hover{background:rgba(255,255,255,.1)}
 @media(min-width:768px){.menu-toggle{display:none}}
 .mobile-menu{position:absolute;top:100%;left:0;right:0;background:rgba(26,26,26,.98);max-height:0;overflow:hidden;transition:max-height .4s ease}
-.mobile-menu.open{max-height:400px}
+.mobile-menu.open{max-height:500px}
 @media(min-width:768px){.mobile-menu{display:none}}
 .mobile-menu nav{padding:1rem 1.5rem 1.5rem;display:flex;flex-direction:column;gap:.75rem}
 .mobile-menu a{padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.08);font-weight:500}
 .mobile-menu a.active{color:var(--primary)}
-.mobile-menu .wa-mobile{margin-top:.5rem;background:var(--secondary);padding:.85rem;border-radius:999px;text-align:center;font-weight:600;border:none}
-
-/* ========== HERO ========== */
+.mobile-menu .wa-mobile{margin-top:.5rem;background:var(--secondary);padding:.85rem;border-radius:999px;text-align:center;font-weight:600;border:none;display:flex;align-items:center;justify-content:center;gap:.5rem}
 .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.4),rgba(0,0,0,.7));z-index:1}
@@ -137,13 +124,12 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .btn-pink{background:var(--primary);color:#fff}
 .btn-pink:hover{background:#e85a70}
 .btn-block{width:100%}
+.btn svg{flex-shrink:0}
 .hero-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:2.5rem}
 .hero-badges span{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.1);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);padding:.5rem .85rem;border-radius:999px;font-size:.75rem;font-weight:500}
 .video-toggle{position:absolute;bottom:2rem;right:1.5rem;z-index:3;width:2.75rem;height:2.75rem;border-radius:50%;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.4);color:#fff;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .video-toggle:hover{background:rgba(0,0,0,.75);transform:scale(1.05)}
 @media(max-width:640px){.video-toggle{right:1rem;bottom:1rem;width:2.5rem;height:2.5rem}}
-
-/* ========== CARDS HÉBERGEMENT ========== */
 .card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);transition:all .3s;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-xl)}
 .card-img{position:relative;height:12rem;overflow:hidden;flex-shrink:0}
@@ -159,7 +145,7 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .card-desc{font-size:.85rem;color:var(--text-gray);line-height:1.5;margin-bottom:1rem}
 .card-features{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-bottom:1rem}
 .card-features div{display:flex;align-items:center;gap:.35rem;font-size:.75rem;color:var(--text-gray)}
-.card-features i{color:var(--secondary);flex-shrink:0}
+.card-features i{color:var(--secondary);flex-shrink:0;font-style:normal}
 .price-box{background:#fdf2f8;border-radius:.75rem;padding:.75rem;margin-bottom:1rem;margin-top:auto}
 .price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
 .price{font-size:1.5rem;font-weight:700;color:var(--primary);line-height:1}
@@ -167,8 +153,6 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .price-2h{font-size:.75rem;color:var(--text-gray)}
 .price-2h strong{color:var(--primary)}
 .price-note{font-size:.75rem;color:var(--secondary);font-weight:600;margin-top:.35rem}
-
-/* ========== AVIS CARROUSEL ========== */
 .reviews-wrap{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);overflow:hidden;max-width:56rem;margin:0 auto}
 .review-slide{display:none;grid-template-columns:1fr}
 .review-slide.active{display:grid}
@@ -195,22 +179,18 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .review-dots{display:flex;gap:.35rem}
 .review-dots button{width:.625rem;height:.625rem;border-radius:999px;background:#e5e7eb;transition:all .2s}
 .review-dots button.active{width:1.5rem;background:var(--primary)}
-
-/* ========== STATS ========== */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:3rem}
 @media(min-width:768px){.stats{grid-template-columns:repeat(4,1fr);gap:2rem}}
 .stat{background:#fff;border-radius:var(--radius);padding:1.25rem .75rem;text-align:center;box-shadow:var(--shadow-md)}
 .stat-num{font-size:clamp(1.8rem,4vw,3rem);font-weight:800;color:var(--primary);line-height:1;margin-bottom:.5rem}
 .stat-label{font-size:.75rem;color:var(--text-gray);line-height:1.3}
 @media(min-width:640px){.stat-label{font-size:.85rem}}
-
-/* ========== HISTOIRE ========== */
 .story{display:flex;flex-direction:column;gap:2.5rem;align-items:center}
 @media(min-width:1024px){.story{flex-direction:row;gap:4rem}}
 .story-img{position:relative;border-radius:var(--radius-lg);overflow:hidden;width:100%}
 .story-img img{width:100%;height:auto;display:block}
 .story-badge{position:absolute;bottom:1rem;left:1rem;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:.75rem;padding:.75rem 1rem;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:.6rem}
-.story-badge i{color:var(--secondary);font-size:1.25rem}
+.story-badge i{color:var(--secondary);font-size:1.25rem;font-style:normal}
 .story-badge strong{display:block;font-size:.85rem;color:var(--dark)}
 .story-badge small{font-size:.7rem;color:var(--text-gray)}
 .story-content{flex:1}
@@ -220,11 +200,9 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .story-features{display:grid;grid-template-columns:1fr;gap:.75rem;margin:1.5rem 0}
 @media(min-width:640px){.story-features{grid-template-columns:1fr 1fr}}
 .story-feature{display:flex;gap:.75rem;background:var(--bg-light);border-radius:.75rem;padding:.85rem}
-.story-feature-icon{width:2.25rem;height:2.25rem;background:var(--primary-10);border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--primary)}
+.story-feature-icon{width:2.25rem;height:2.25rem;background:var(--primary-10);border-radius:.5rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--primary);font-style:normal}
 .story-feature strong{display:block;font-size:.85rem;color:var(--dark);margin-bottom:.15rem}
 .story-feature small{font-size:.75rem;color:var(--text-gray)}
-
-/* ========== RÉSERVATION ========== */
 .reservation-box{background:var(--bg-light);border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-lg)}
 @media(min-width:640px){.reservation-box{padding:2rem}}
 @media(min-width:1024px){.reservation-box{padding:2.5rem}}
@@ -256,8 +234,6 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .contact-icon{width:2.5rem;height:2.5rem;border-radius:.75rem;background:#f9fafb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
 .contact-card small{display:block;font-size:.7rem;color:var(--text-gray)}
 .contact-card strong{font-size:.85rem;color:var(--dark)}
-
-/* ========== LOCALISATION ========== */
 .location-info{display:flex;flex-direction:column;gap:1rem}
 .info-card{display:flex;gap:1rem;background:#fff;border:1px solid #f3f4f6;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow-md)}
 .info-card-icon{width:2.75rem;height:2.75rem;border-radius:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.25rem}
@@ -270,8 +246,6 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .info-card-arrow:hover{background:var(--primary);color:#fff}
 .map-frame{width:100%;height:20rem;border:0;border-radius:var(--radius);box-shadow:var(--shadow-xl)}
 @media(min-width:1024px){.map-frame{height:500px}}
-
-/* ========== FOOTER ========== */
 footer{background:var(--footer-dark);color:#fff}
 .footer-cta{background:var(--primary);padding:2rem 0}
 .footer-cta-inner{display:flex;flex-direction:column;gap:1.25rem;align-items:center;text-align:center}
@@ -299,7 +273,7 @@ footer{background:var(--footer-dark);color:#fff}
 .footer-col ul a{font-size:.875rem;opacity:.7;display:inline-flex;align-items:center;gap:.35rem;transition:opacity .2s}
 .footer-col ul a:hover{opacity:1}
 .footer-contact li{display:flex;gap:.5rem;font-size:.875rem;opacity:.75;line-height:1.5;margin-bottom:.75rem}
-.footer-contact i{color:var(--primary);margin-top:.15rem;flex-shrink:0}
+.footer-contact i{color:var(--primary);margin-top:.15rem;flex-shrink:0;font-style:normal}
 .footer-contact a{opacity:1}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
 @media(min-width:640px){.footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}}
@@ -307,36 +281,37 @@ footer{background:var(--footer-dark);color:#fff}
 .footer-social{display:flex;gap:.5rem}
 .footer-social a{width:2.25rem;height:2.25rem;border:1px solid rgba(255,255,255,.2);border-radius:.5rem;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:1rem}
 .footer-social a:hover{background:var(--primary);border-color:var(--primary)}
-
-/* ========== WHATSAPP FLOTTANT ========== */
-.wa-float{position:fixed;bottom:1.5rem;left:1.5rem;z-index:9998;width:3.5rem;height:3.5rem;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.75rem;box-shadow:0 8px 20px rgba(37,211,102,.4);transition:all .3s;animation:waPulse 2s infinite}
+.footer-credit{width:100%;text-align:center;padding:1rem 0 0;margin-top:.5rem;border-top:1px dashed rgba(255,255,255,.1);display:flex;flex-direction:column;align-items:center;gap:.75rem;font-size:.8rem;opacity:.9}
+@media(min-width:640px){.footer-credit{flex-direction:row;justify-content:center;gap:.75rem}}
+.footer-credit strong{color:var(--primary)}
+.footer-credit a{display:inline-flex;align-items:center;gap:.4rem;background:var(--wa-green);color:#fff;padding:.4rem .85rem;border-radius:999px;font-weight:600;font-size:.75rem;transition:all .2s}
+.footer-credit a:hover{background:var(--wa-green-dark);transform:translateY(-2px)}
+.wa-float{position:fixed;bottom:1.5rem;left:1.5rem;z-index:9998;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--wa-green);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(37,211,102,.4);transition:all .3s;animation:waPulse 2s infinite}
+.wa-float svg{width:1.75rem;height:1.75rem;fill:#fff}
 .wa-float:hover{transform:scale(1.1);box-shadow:0 12px 28px rgba(37,211,102,.6)}
 @keyframes waPulse{0%,100%{box-shadow:0 8px 20px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.7)}50%{box-shadow:0 8px 20px rgba(37,211,102,.4),0 0 0 14px rgba(37,211,102,0)}}
 .wa-float-label{position:absolute;left:4.25rem;background:#1a1a1a;color:#fff;padding:.5rem .85rem;border-radius:.5rem;font-size:.8rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s;font-weight:500}
 .wa-float:hover .wa-float-label{opacity:1}
-@media(max-width:640px){.wa-float{bottom:5.25rem;left:1rem;width:3rem;height:3rem;font-size:1.5rem}.wa-float-label{display:none}}
-
-/* ========== CHATBOT ========== */
-.chat-toggle{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--secondary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 8px 20px rgba(47,143,86,.4);transition:all .3s}
+@media(max-width:640px){.wa-float{bottom:5.25rem;left:1rem;width:3rem;height:3rem}.wa-float svg{width:1.5rem;height:1.5rem}.wa-float-label{display:none}}
+.chat-toggle{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9999;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--secondary);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(47,143,86,.4);transition:all .3s}
+.chat-toggle svg{width:1.75rem;height:1.75rem;fill:#fff}
 .chat-toggle:hover{transform:scale(1.1)}
 .chat-toggle .chat-badge{position:absolute;top:-2px;right:-2px;width:1rem;height:1rem;background:var(--primary);border-radius:50%;border:2px solid #fff;display:none;animation:chatBadgePulse 1.5s infinite}
 @keyframes chatBadgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
 .chat-toggle.has-msg .chat-badge{display:block}
-@media(max-width:640px){.chat-toggle{bottom:1rem;right:1rem;width:3rem;height:3rem;font-size:1.35rem}}
-
+@media(max-width:640px){.chat-toggle{bottom:1rem;right:1rem;width:3rem;height:3rem}.chat-toggle svg{width:1.5rem;height:1.5rem}}
 .chat-window{position:fixed;bottom:5.5rem;right:1.5rem;z-index:9999;width:22rem;max-width:calc(100vw - 2rem);height:32rem;max-height:calc(100vh - 7rem);background:#fff;border-radius:var(--radius-lg);box-shadow:0 25px 50px -12px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(20px) scale(.95);pointer-events:none;transition:all .3s cubic-bezier(.4,0,.2,1)}
 .chat-window.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
 @media(max-width:640px){.chat-window{right:.75rem;left:.75rem;bottom:5rem;width:auto;height:calc(100vh - 7rem);max-height:34rem}}
-
 .chat-header{background:linear-gradient(135deg,var(--secondary),#267a47);color:#fff;padding:1rem;display:flex;align-items:center;gap:.75rem;flex-shrink:0}
-.chat-header-avatar{width:2.5rem;height:2.5rem;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;position:relative}
+.chat-header-avatar{width:2.5rem;height:2.5rem;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
+.chat-header-avatar svg{width:1.5rem;height:1.5rem;fill:#fff}
 .chat-header-avatar::after{content:'';position:absolute;bottom:0;right:0;width:.75rem;height:.75rem;background:#4ade80;border-radius:50%;border:2px solid #fff}
 .chat-header-info{flex:1;min-width:0}
 .chat-header-info strong{display:block;font-size:.95rem}
 .chat-header-info small{font-size:.75rem;opacity:.85}
 .chat-close{width:2rem;height:2rem;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:background .2s}
 .chat-close:hover{background:rgba(255,255,255,.15)}
-
 .chat-body{flex:1;overflow-y:auto;padding:1rem;background:#f9fafb;display:flex;flex-direction:column;gap:.75rem}
 .chat-body::-webkit-scrollbar{width:4px}
 .chat-body::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:2px}
@@ -344,31 +319,27 @@ footer{background:var(--footer-dark);color:#fff}
 @keyframes msgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .chat-msg.bot{align-self:flex-start}
 .chat-msg.user{align-self:flex-end;flex-direction:row-reverse}
-.chat-msg-avatar{width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.chat-msg-avatar{width:2rem;height:2rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
 .chat-msg.bot .chat-msg-avatar{background:var(--secondary);color:#fff}
 .chat-msg.user .chat-msg-avatar{background:var(--primary);color:#fff}
+.chat-msg-avatar svg{width:1rem;height:1rem;fill:#fff}
 .chat-msg-bubble{padding:.65rem .9rem;border-radius:1rem;font-size:.875rem;line-height:1.5;word-wrap:break-word}
 .chat-msg.bot .chat-msg-bubble{background:#fff;color:var(--dark);border-top-left-radius:.25rem;box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .chat-msg.user .chat-msg-bubble{background:var(--secondary);color:#fff;border-top-right-radius:.25rem}
-
 .chat-quick{display:flex;flex-wrap:wrap;gap:.4rem;padding:0 1rem .5rem;background:#f9fafb}
 .chat-quick button{background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:.4rem .75rem;font-size:.75rem;color:var(--secondary);font-weight:500;transition:all .2s;cursor:pointer}
 .chat-quick button:hover{background:var(--secondary);color:#fff;border-color:var(--secondary)}
-
 .chat-footer{padding:.75rem;background:#fff;border-top:1px solid #e5e7eb;display:flex;gap:.5rem;align-items:center;flex-shrink:0}
 .chat-footer input{flex:1;min-width:0;padding:.6rem .85rem;border:1px solid #e5e7eb;border-radius:999px;font-size:.875rem;outline:none;transition:border-color .2s}
 .chat-footer input:focus{border-color:var(--secondary)}
-.chat-send{width:2.5rem;height:2.5rem;border-radius:50%;background:var(--secondary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;transition:all .2s}
+.chat-send{width:2.5rem;height:2.5rem;border-radius:50%;background:var(--secondary);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.chat-send svg{width:1.15rem;height:1.15rem;fill:#fff}
 .chat-send:hover{background:#267a47;transform:scale(1.05)}
-
 .chat-typing{display:flex;gap:.25rem;padding:.85rem 1rem;background:#fff;border-radius:1rem;border-top-left-radius:.25rem;width:fit-content;box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .chat-typing span{width:.5rem;height:.5rem;background:#cbd5e1;border-radius:50%;animation:typingBounce 1.4s infinite}
 .chat-typing span:nth-child(2){animation-delay:.2s}
 .chat-typing span:nth-child(3){animation-delay:.4s}
 @keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
-
-/* ========== ANIMATIONS UTILITAIRES ========== */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .mt-2{margin-top:.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}
@@ -377,7 +348,6 @@ footer{background:var(--footer-dark);color:#fff}
 </head>
 <body>
 
-<!-- ============ HEADER ============ -->
 <header id="header">
   <div class="container nav">
     <a href="index.html" class="logo">
@@ -391,8 +361,9 @@ footer{background:var(--footer-dark);color:#fff}
       <a href="reservation.html">Réservation</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <a href="https://wa.me/22901678216?text=Bonjour%20Mèfinlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20réservation." class="btn-reserve" target="_blank" rel="noopener">
-      <span>📱</span><span>Réserver</span>
+    <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="btn-reserve" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>Réserver</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
   </div>
@@ -403,14 +374,16 @@ footer{background:var(--footer-dark);color:#fff}
       <a href="galerie.html">Galerie</a>
       <a href="reservation.html">Réservation</a>
       <a href="contact.html">Contact</a>
-      <a href="https://wa.me/22901678216?text=Bonjour%20Mèfinlo%20Ghouse" class="wa-mobile" target="_blank" rel="noopener">📱 Réserver via WhatsApp</a>
+      <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse" class="wa-mobile" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Réserver via WhatsApp</span>
+      </a>
     </nav>
   </div>
 </header>
 
 <main>
 
-<!-- ============ HERO avec VIDÉO ============ -->
 <section class="hero">
   <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg">
     <source src="hero.mp4" type="video/mp4">
@@ -422,8 +395,9 @@ footer{background:var(--footer-dark);color:#fff}
     <h1>Mèfinlo Ghouse<span>Hébergement & Détente</span></h1>
     <p>Studios, Chambre-Salon et 2 Chambres — Réservez <strong>2h ou une nuitée</strong>. Calme, jardin verdoyant, proche Carrefour Sogbo-Aliho.</p>
     <div class="hero-buttons">
-      <a href="https://wa.me/22901678216?text=Bonjour%20Mèfinlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20réservation.%20Pouvez-vous%20me%20donner%20les%20disponibilités%20%3F" class="btn btn-primary" target="_blank" rel="noopener">
-        <span>📱</span><span>Réserver via WhatsApp</span>
+      <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="btn btn-primary" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Réserver via WhatsApp</span>
       </a>
       <a href="#hebergements" class="btn btn-outline">
         <span>👁️</span><span>Voir les chambres</span>
@@ -438,7 +412,6 @@ footer{background:var(--footer-dark);color:#fff}
   <button class="video-toggle" id="videoToggle" aria-label="Pause ou lecture de la vidéo">⏸</button>
 </section>
 
-<!-- ============ HÉBERGEMENTS ============ -->
 <section class="section" id="hebergements" style="background:var(--bg-light)">
   <div class="container">
     <div class="section-title reveal">
@@ -446,11 +419,10 @@ footer{background:var(--footer-dark);color:#fff}
       <h2>Nos Hébergements</h2>
       <p>Studios confortables, chambres-salon spacieuses et suites familiales — options ventilées ou climatisées</p>
     </div>
-    <div class="grid grid-3" id="hebergementsGrid"><!-- injecté par JS --></div>
+    <div class="grid grid-3" id="hebergementsGrid"></div>
   </div>
 </section>
 
-<!-- ============ AVIS ============ -->
 <section class="section" style="background:var(--bg-warm)">
   <div class="container">
     <div class="section-title reveal">
@@ -458,7 +430,7 @@ footer{background:var(--footer-dark);color:#fff}
       <h2>Ce que disent nos clients</h2>
       <p>Des centaines de clients satisfaits à Bohicon-Abomey</p>
     </div>
-    <div class="reviews-wrap reveal" id="reviewsWrap"><!-- injecté par JS --></div>
+    <div class="reviews-wrap reveal" id="reviewsWrap"></div>
     <div class="stats reveal">
       <div class="stat"><div class="stat-num">150+</div><div class="stat-label">Clients satisfaits / mois</div></div>
       <div class="stat"><div class="stat-num">4.8/5</div><div class="stat-label">Note Google</div></div>
@@ -468,14 +440,13 @@ footer{background:var(--footer-dark);color:#fff}
   </div>
 </section>
 
-<!-- ============ HISTOIRE ============ -->
 <section class="section" style="background:#fff">
   <div class="container">
     <div class="story">
       <div class="story-img reveal">
         <img src="photo10.jpg" alt="Jardin verdoyant de Mèfinlo Ghouse" loading="lazy">
         <div class="story-badge">
-          <span>🌿</span>
+          <i>🌿</i>
           <div><strong>Jardin verdoyant</strong><small>Espace de détente unique</small></div>
         </div>
       </div>
@@ -490,13 +461,15 @@ footer{background:var(--footer-dark);color:#fff}
           <div class="story-feature"><div class="story-feature-icon">🛡️</div><div><strong>Sécurité 24h/24</strong><small>Environnement sécurisé</small></div></div>
           <div class="story-feature"><div class="story-feature-icon">🌿</div><div><strong>Espace vert</strong><small>Jardin paisible et fleuri</small></div></div>
         </div>
-        <a href="https://wa.me/22901678216?text=Bonjour%20Mèfinlo%20Ghouse%2C%20je%20voudrais%20en%20savoir%20plus%20sur%20vos%20hébergements." class="btn btn-pink" target="_blank" rel="noopener"><span>📱</span><span>Nous contacter</span></a>
+        <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20voudrais%20en%20savoir%20plus." class="btn btn-pink" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>Nous contacter</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ RÉSERVATION ============ -->
 <section class="section" id="reservation" style="background:#fff">
   <div class="container" style="max-width:64rem">
     <div class="section-title reveal">
@@ -523,12 +496,17 @@ footer{background:var(--footer-dark);color:#fff}
           <button data-value="2 heures">🕒 2 heures</button>
         </div>
       </div>
-      <button class="res-submit" id="resSubmit">📱 Envoyer ma demande sur WhatsApp →</button>
+      <button class="res-submit" id="resSubmit">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Envoyer ma demande sur WhatsApp</span>
+      </button>
       <p class="res-note">🔒 Réponse garantie en moins de 30 minutes · Aucun paiement en ligne requis</p>
     </div>
     <div class="contact-cards">
       <a href="https://wa.me/22901678216" target="_blank" rel="noopener" class="contact-card">
-        <div class="contact-icon" style="color:var(--secondary)">📱</div>
+        <div class="contact-icon" style="color:var(--wa-green)">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
         <div><small>WhatsApp</small><strong>01 67 82 16 16</strong></div>
       </a>
       <a href="tel:+22901447979" class="contact-card">
@@ -543,7 +521,6 @@ footer{background:var(--footer-dark);color:#fff}
   </div>
 </section>
 
-<!-- ============ LOCALISATION ============ -->
 <section class="section" style="background:var(--bg-light)">
   <div class="container">
     <div class="section-title reveal">
@@ -595,7 +572,6 @@ footer{background:var(--footer-dark);color:#fff}
 
 </main>
 
-<!-- ============ FOOTER ============ -->
 <footer>
   <div class="footer-cta">
     <div class="container footer-cta-inner">
@@ -603,7 +579,10 @@ footer{background:var(--footer-dark);color:#fff}
         <h3>Prêt à réserver votre séjour ?</h3>
         <p>Contactez-nous directement sur WhatsApp — réponse en moins de 30 min</p>
       </div>
-      <a href="https://wa.me/22901678216?text=Bonjour%20Mèfinlo%20Ghouse%2C%20je%20souhaite%20réserver%20un%20hébergement." target="_blank" rel="noopener">📱 Réserver maintenant</a>
+      <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20r%C3%A9server." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Réserver maintenant</span>
+      </a>
     </div>
   </div>
   <div class="footer-main">
@@ -651,29 +630,38 @@ footer{background:var(--footer-dark);color:#fff}
         <div class="footer-social">
           <a href="https://facebook.com/" target="_blank" rel="nofollow noopener" aria-label="Facebook">📘</a>
           <a href="https://instagram.com/" target="_blank" rel="nofollow noopener" aria-label="Instagram">📷</a>
-          <a href="https://wa.me/22901678216" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">📱</a>
+          <a href="https://wa.me/22901678216" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
           <a href="https://maps.google.com/" target="_blank" rel="nofollow noopener" aria-label="Google Maps">🗺️</a>
         </div>
+      </div>
+      <div class="footer-credit">
+        <span>Conçu & développé par <strong>Frédy Amoussou</strong></span>
+        <a href="https://wa.me/2290152552106?text=Bonjour%20Fr%C3%A9dy%2C%20je%20vous%20contacte%20au%20sujet%20du%20site%20M%C3%A8finlo%20Ghouse." target="_blank" rel="noopener" aria-label="Contacter Frédy Amoussou sur WhatsApp">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span>+229 01 52 55 21 06</span>
+        </a>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- ============ WHATSAPP FLOTTANT ============ -->
-<a href="https://wa.me/22901678216?text=Bonjour%20Mèfinlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20réservation." class="wa-float" target="_blank" rel="noopener" aria-label="Contacter via WhatsApp">
-  <span>📱</span>
+<a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="wa-float" target="_blank" rel="noopener" aria-label="Contacter via WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="wa-float-label">Besoin d'aide ? Discutons !</span>
 </a>
 
-<!-- ============ CHATBOT ============ -->
 <button class="chat-toggle" id="chatToggle" aria-label="Ouvrir le chatbot" aria-expanded="false">
-  <span>💬</span>
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
   <span class="chat-badge"></span>
 </button>
 
 <div class="chat-window" id="chatWindow" role="dialog" aria-label="Chatbot Mèfinlo Ghouse">
   <div class="chat-header">
-    <div class="chat-header-avatar">🤖</div>
+    <div class="chat-header-avatar">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+    </div>
     <div class="chat-header-info">
       <strong>Assistant Mèfinlo</strong>
       <small>● En ligne — Réponse instantanée</small>
@@ -684,7 +672,9 @@ footer{background:var(--footer-dark);color:#fff}
   <div class="chat-quick" id="chatQuick"></div>
   <form class="chat-footer" id="chatForm">
     <input type="text" id="chatInput" placeholder="Écrivez votre message..." autocomplete="off" aria-label="Message">
-    <button type="submit" class="chat-send" aria-label="Envoyer">➤</button>
+    <button type="submit" class="chat-send" aria-label="Envoyer">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
   </form>
 </div>
 
@@ -692,17 +682,19 @@ footer{background:var(--footer-dark);color:#fff}
 (function(){
   'use strict';
 
-  /* ========== ANNÉE DYNAMIQUE ========== */
+  const WA_MAIN = 'https://wa.me/22901678216';
+  const WHATSAPP = WA_MAIN;
+  const PHONE1 = '+22901678216';
+  const PHONE2 = '+22901447979';
+  const WA_FREDY = 'https://wa.me/2290152552106';
+  const WA_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ========== HEADER SCROLL ========== */
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 20);
-  }, { passive: true });
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
 
-  /* ========== MENU MOBILE ========== */
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
   if (menuToggle && mobileMenu) {
@@ -718,42 +710,26 @@ footer{background:var(--footer-dark);color:#fff}
     }));
   }
 
-  /* ========== HERO VIDÉO ========== */
   const heroVideo = document.getElementById('heroVideo');
   const videoToggle = document.getElementById('videoToggle');
   if (heroVideo && videoToggle) {
-    // Lancer la vidéo dès que possible
     const tryPlay = () => heroVideo.play().catch(() => {});
     tryPlay();
     document.addEventListener('click', tryPlay, { once: true });
     videoToggle.addEventListener('click', () => {
-      if (heroVideo.paused) {
-        heroVideo.play();
-        videoToggle.textContent = '⏸';
-        videoToggle.setAttribute('aria-label', 'Mettre en pause');
-      } else {
-        heroVideo.pause();
-        videoToggle.textContent = '▶';
-        videoToggle.setAttribute('aria-label', 'Lancer la vidéo');
-      }
+      if (heroVideo.paused) { heroVideo.play(); videoToggle.textContent = '⏸'; }
+      else { heroVideo.pause(); videoToggle.textContent = '▶'; }
     });
   }
 
-  /* ========== DONNÉES HÉBERGEMENTS ========== */
   const hebergements = [
-    { tag:'Studio', titre:'Studio Ventilé', desc:"Espace confortable et aéré, idéal pour un séjour court ou une nuitée relaxante.",
-      image:'photo6.jpg', prix:'5 000', prix2h:'3 000', note:'', features:['Ventilé','1-2 personnes','20m²','Salle de bain privée'] },
-    { tag:'Studio', titre:'Studio Climatisé', desc:"Confort optimal avec climatisation pour des nuits paisibles et reposantes.",
-      image:'photo4.jpg', prix:'8 000', prix2h:null, note:'🎁 2 nuits : 15 000 FCFA', features:['Climatisé','1-2 personnes','22m²','Salle de bain privée'] },
-    { tag:'Chambre-Salon', titre:'Chambre-Salon Ventilée', desc:"Espace généreux avec salon séparé, parfait pour les séjours prolongés.",
-      image:'photo5.jpg', prix:'10 000', prix2h:'5 000', note:'', features:['Ventilé','2-3 personnes','35m²','Salon séparé'] },
-    { tag:'Chambre-Salon', titre:'Chambre-Salon Climatisée', desc:"Luxe et confort avec climatisation dans un espace salon-chambre élégant.",
-      image:'photo7.jpg', prix:'15 000', prix2h:'5 000', note:'', features:['Climatisé','2-3 personnes','38m²','Salon séparé'] },
-    { tag:'Suite Familiale', titre:'Suite 2 Chambres-Salon', desc:"Espace familial complet avec deux chambres et salon, idéal pour groupes.",
-      image:'photo8.jpg', prix:'20 000', prix2h:null, note:'', features:['Climatisé/Ventilé','4-6 personnes','60m²','2 Chambres + Salon'] }
+    { tag:'Studio', titre:'Studio Ventilé', desc:"Espace confortable et aéré, idéal pour un séjour court ou une nuitée relaxante.", image:'photo6.jpg', prix:'5 000', prix2h:'3 000', note:'', features:['Ventilé','1-2 personnes','20m²','Salle de bain privée'] },
+    { tag:'Studio', titre:'Studio Climatisé', desc:"Confort optimal avec climatisation pour des nuits paisibles et reposantes.", image:'photo4.jpg', prix:'8 000', prix2h:null, note:'🎁 2 nuits : 15 000 FCFA', features:['Climatisé','1-2 personnes','22m²','Salle de bain privée'] },
+    { tag:'Chambre-Salon', titre:'Chambre-Salon Ventilée', desc:"Espace généreux avec salon séparé, parfait pour les séjours prolongés.", image:'photo5.jpg', prix:'10 000', prix2h:'5 000', note:'', features:['Ventilé','2-3 personnes','35m²','Salon séparé'] },
+    { tag:'Chambre-Salon', titre:'Chambre-Salon Climatisée', desc:"Luxe et confort avec climatisation dans un espace salon-chambre élégant.", image:'photo7.jpg', prix:'15 000', prix2h:'5 000', note:'', features:['Climatisé','2-3 personnes','38m²','Salon séparé'] },
+    { tag:'Suite Familiale', titre:'Suite 2 Chambres-Salon', desc:"Espace familial complet avec deux chambres et salon, idéal pour groupes.", image:'photo8.jpg', prix:'20 000', prix2h:null, note:'', features:['Climatisé/Ventilé','4-6 personnes','60m²','2 Chambres + Salon'] }
   ];
 
-  /* ========== RENDU HÉBERGEMENTS ========== */
   const hGrid = document.getElementById('hebergementsGrid');
   if (hGrid) {
     hGrid.innerHTML = hebergements.map(h => {
@@ -779,13 +755,12 @@ footer{background:var(--footer-dark);color:#fff}
             </div>
             ${note}
           </div>
-          <a href="https://wa.me/22901678216?text=${waText}" class="btn btn-primary btn-block" target="_blank" rel="noopener">📱 Réserver via WhatsApp</a>
+          <a href="https://wa.me/22901678216?text=${waText}" class="btn btn-primary btn-block" target="_blank" rel="noopener">${WA_SVG}<span>Réserver via WhatsApp</span></a>
         </div>
       </article>`;
     }).join('');
   }
 
-  /* ========== AVIS CARROUSEL ========== */
   const avis = [
     { img:'a1.jpg', note:5, titre:'"Un endroit parfait pour se détendre"', texte:"Mèfinlo Ghouse est vraiment un havre de paix. Les chambres sont propres, le personnel est accueillant et l'espace vert est magnifique. J'ai passé une excellente nuitée et je reviendrai certainement.", auteur:'Adjovi Koffi', source:'Google Avis' },
     { img:'photo1.jpg', note:5, titre:'"Accueil chaleureux et cadre paisible"', texte:"Nous avons été reçus comme des rois. Le jardin est superbe, les chambres impeccables et le rapport qualité-prix imbattable. Je recommande vivement !", auteur:'Serge Dossou', source:'Google Avis' },
@@ -814,7 +789,6 @@ footer{background:var(--footer-dark);color:#fff}
         </div>
       </div>`).join('');
     rWrap.innerHTML = slides;
-
     let current = 0;
     const showSlide = (n) => {
       current = (n + avis.length) % avis.length;
@@ -824,13 +798,11 @@ footer{background:var(--footer-dark);color:#fff}
     rWrap.querySelector('.review-btn.prev').addEventListener('click', () => showSlide(current - 1));
     rWrap.querySelector('.review-btn.next').addEventListener('click', () => showSlide(current + 1));
     rWrap.querySelectorAll('.review-dots button').forEach(d => d.addEventListener('click', () => showSlide(+d.dataset.dot)));
-    // Auto-play
     let autoTimer = setInterval(() => showSlide(current + 1), 7000);
     rWrap.addEventListener('mouseenter', () => clearInterval(autoTimer));
     rWrap.addEventListener('mouseleave', () => autoTimer = setInterval(() => showSlide(current + 1), 7000));
   }
 
-  /* ========== RÉSERVATION INTERACTIVE ========== */
   const resHebergements = document.getElementById('resHebergements');
   const resVentilation = document.getElementById('resVentilation');
   const resDuree = document.getElementById('resDuree');
@@ -840,10 +812,7 @@ footer{background:var(--footer-dark);color:#fff}
   if (resHebergements) {
     resHebergements.innerHTML = hebergements.map(h => `
       <button type="button" class="res-option" data-value="${h.titre}">
-        <div>
-          <strong>${h.titre}</strong>
-          <small>À partir de ${h.prix} FCFA</small>
-        </div>
+        <div><strong>${h.titre}</strong><small>À partir de ${h.prix} FCFA</small></div>
         <div class="res-radio"></div>
       </button>`).join('');
     resHebergements.addEventListener('click', (e) => {
@@ -871,39 +840,30 @@ footer{background:var(--footer-dark);color:#fff}
   if (resSubmit) {
     resSubmit.addEventListener('click', () => {
       const heberg = state.hebergement || 'Non précisé';
-      const text = `Bonjour Mèfinlo Ghouse 👋\nJe souhaite faire une réservation :\n\n🏠 Hébergement : *${heberg}*\n❄️ Option : *${state.ventilation}*\n⏱️ Durée : *${state.duree}*\n\nPouvez-vous confirmer la disponibilité et me donner les détails ?`;
+      const text = `Bonjour Mèfinlo Ghouse 👋\nJe souhaite faire une réservation :\n\n🏠 Hébergement : *${heberg}*\n❄️ Option : *${state.ventilation}*\n⏱️ Durée : *${state.duree}*\n\nPouvez-vous confirmer la disponibilité ?`;
       window.open(`https://wa.me/22901678216?text=${encodeURIComponent(text)}`, '_blank');
     });
   }
 
-  /* ========== NEWSLETTER ========== */
   const nl = document.getElementById('newsletter');
   if (nl) {
     nl.addEventListener('submit', (e) => {
       e.preventDefault();
       const email = nl.querySelector('input').value;
-      alert(`Merci ! Votre email "${email}" a été enregistré. Nous vous contacterons bientôt.`);
+      alert(`Merci ! Votre email "${email}" a été enregistré.`);
       nl.reset();
     });
   }
 
-  /* ========== REVEAL ON SCROLL ========== */
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     revealEls.forEach(el => io.observe(el));
-  } else {
-    revealEls.forEach(el => el.classList.add('visible'));
-  }
+  } else { revealEls.forEach(el => el.classList.add('visible')); }
 
-  /* ========== CHATBOT ========== */
+  // ================= CHATBOT =================
   const chatToggle = document.getElementById('chatToggle');
   const chatWindow = document.getElementById('chatWindow');
   const chatClose = document.getElementById('chatClose');
@@ -912,41 +872,39 @@ footer{background:var(--footer-dark);color:#fff}
   const chatInput = document.getElementById('chatInput');
   const chatQuick = document.getElementById('chatQuick');
 
-  const WHATSAPP = 'https://wa.me/22901678216';
-  const PHONE1 = '+22901678216';
-  const PHONE2 = '+22901447979';
-
-  // Base de connaissance du chatbot
   const botKnowledge = [
     { keys:['bonjour','salut','bonsoir','hello','coucou','hey','bjr','slt'],
-      reply:`Bonjour et bienvenue à Mèfinlo Ghouse 👋\nComment puis-je vous aider aujourd'hui ?\n\nVous pouvez me demander :\n• Les tarifs\n• La localisation\n• Les types de chambres\n• Comment réserver` },
+      reply:`Bonjour et bienvenue à Mèfinlo Ghouse 👋\nComment puis-je vous aider ?\n\nVous pouvez me demander :\n• Les tarifs\n• La localisation\n• Les types de chambres\n• Comment réserver` },
     { keys:['tarif','prix','coût','cout','combien','fcfa','cfa'],
-      reply:`Voici nos tarifs 💰\n\n• Studio Ventilé : 5 000 FCFA/nuit (2h : 3 000)\n• Studio Climatisé : 8 000 FCFA/nuit (2 nuits : 15 000)\n• Chambre-Salon Ventilée : 10 000 FCFA/nuit (2h : 5 000)\n• Chambre-Salon Climatisée : 15 000 FCFA/nuit (2h : 5 000)\n• Suite 2 Chambres-Salon : 20 000 FCFA/nuit\n\nSouhaitez-vous réserver ?` },
-    { keys:['réserv','reserv','book','réserver','dispo','disponib'],
+      reply:`Voici nos tarifs 💰\n\n• Studio Ventilé : 5 000 FCFA/nuit (2h : 3 000)\n• Studio Climatisé : 8 000 FCFA/nuit (2 nuits : 15 000)\n• Chambre-Salon Ventilée : 10 000 FCFA/nuit (2h : 5 000)\n• Chambre-Salon Climatisée : 15 000 FCFA/nuit (2h : 5 000)\n• Suite 2 Chambres-Salon : 20 000 FCFA/nuit` },
+    { keys:['réserv','reserv','book','dispo'],
       reply:`Pour réserver, c'est simple ✨\n\n1️⃣ Choisissez votre hébergement\n2️⃣ Indiquez la date et la durée\n3️⃣ Envoyez-nous un message WhatsApp\n\nRéponse garantie en moins de 30 min !`,
       quick:[{ label:'📱 Réserver sur WhatsApp', url:`${WHATSAPP}?text=${encodeURIComponent('Bonjour Mèfinlo Ghouse, je souhaite réserver.')}` }] },
-    { keys:['localis','adresse','où','ou ','trouv','situé','situe','map','carte','djègbè','djejbe','bohicon','abomey','sogbo'],
+    { keys:['localis','adresse','où','trouv','situé','situe','map','carte','djègbè','djejbe','bohicon','abomey','sogbo'],
       reply:`📍 Nous sommes situés :\nCarrefour Sogbo-Aliho, Von\nEn face de la Banque de Sang\nSur le pavé de Djègbè, Bohicon-Abomey, Bénin\n\nOuvert 24h/24 — 7j/7`,
       quick:[{ label:'🗺️ Voir sur Google Maps', url:'https://www.google.com/maps/search/?api=1&query=6.3654,2.4183' }] },
     { keys:['chambre','studio','hébergement','hebergement','suite','salon','type'],
-      reply:`Nous proposons 5 types d'hébergements 🏠\n\n• Studio Ventilé (1-2 pers.)\n• Studio Climatisé (1-2 pers.)\n• Chambre-Salon Ventilée (2-3 pers.)\n• Chambre-Salon Climatisée (2-3 pers.)\n• Suite 2 Chambres-Salon (4-6 pers.)\n\nTous avec salle de bain privée.` },
-    { keys:['horaire','ouvert','heure','24','ferm'],
-      reply:`Nous sommes ouverts 24h/24 et 7j/7 🕒\nAccueil permanent — vous pouvez arriver à toute heure.` },
-    { keys:['contact','téléphone','telephone','appel','numéro','numero','whatsapp'],
-      reply:`Vous pouvez nous joindre 📞\n• WhatsApp : ${PHONE1}\n• Appel : ${PHONE2}\n\nNous répondons en moins de 30 minutes.`,
+      reply:`Nous proposons 5 types d'hébergements 🏠\n\n• Studio Ventilé (1-2 pers.)\n• Studio Climatisé (1-2 pers.)\n• Chambre-Salon Ventilée (2-3 pers.)\n• Chambre-Salon Climatisée (2-3 pers.)\n• Suite 2 Chambres-Salon (4-6 pers.)` },
+    { keys:['horaire','ouvert','heure','ferm'],
+      reply:`Nous sommes ouverts 24h/24 et 7j/7 🕒\nAccueil permanent.` },
+    { keys:['contact','téléphone','telephone','appel','numéro','numero'],
+      reply:`Vous pouvez nous joindre 📞\n• WhatsApp : ${PHONE1}\n• Appel : ${PHONE2}\n\nRéponse en moins de 30 minutes.`,
       quick:[{ label:'📱 Ouvrir WhatsApp', url:WHATSAPP }] },
-    { keys:['2h','2 heure','deux heure','courte','pause','rapide'],
-      reply:`Oui, nous proposons l'option 2 heures ⏱️\n\n• Studio Ventilé : 3 000 FCFA\n• Chambre-Salon Ventilée : 5 000 FCFA\n• Chambre-Salon Climatisée : 5 000 FCFA\n\nParfait pour une pause rapide !` },
+    { keys:['2h','2 heure','courte','pause'],
+      reply:`Option 2 heures ⏱️\n\n• Studio Ventilé : 3 000 FCFA\n• Chambre-Salon Ventilée : 5 000 FCFA\n• Chambre-Salon Climatisée : 5 000 FCFA` },
     { keys:['nuit','nuitée','nuitee','dormir'],
-      reply:`Nos tarifs par nuitée 🌙\n\n• Studio Ventilé : 5 000 FCFA\n• Studio Climatisé : 8 000 FCFA (2 nuits : 15 000)\n• Chambre-Salon Ventilée : 10 000 FCFA\n• Chambre-Salon Climatisée : 15 000 FCFA\n• Suite Familiale : 20 000 FCFA` },
-    { keys:['jardin','verdoyant','espace vert','extérieur','exterieur'],
-      reply:`Oui ! Nous avons un magnifique jardin verdoyant 🌿\nUn espace de détente unique, calme et fleuri, loin de l'agitation urbaine.` },
-    { keys:['sécur','secur','gardien','surveil'],
-      reply:`Votre sécurité est notre priorité 🛡️\nEnvironnement sécurisé 24h/24 avec accueil permanent.` },
-    { keys:['merci','super','génial','genial','parfait','bien','ok','d accord','d\'accord'],
-      reply:`Avec plaisir ! 😊\nN'hésitez pas si vous avez d'autres questions. Bon séjour à Mèfinlo Ghouse !` },
-    { keys:['au revoir','bye','à plus','a plus','ciao'],
-      reply:`Merci de votre visite ! 👋\nÀ très bientôt à Mèfinlo Ghouse 🌿` }
+      reply:`Tarifs par nuitée 🌙\n\n• Studio Ventilé : 5 000 FCFA\n• Studio Climatisé : 8 000 FCFA (2 nuits : 15 000)\n• Chambre-Salon Ventilée : 10 000 FCFA\n• Chambre-Salon Climatisée : 15 000 FCFA\n• Suite Familiale : 20 000 FCFA` },
+    { keys:['jardin','verdoyant','vert','extérieur'],
+      reply:`Oui ! Nous avons un magnifique jardin verdoyant 🌿\nUn espace de détente unique, calme et fleuri.` },
+    { keys:['sécur','secur','gardien'],
+      reply:`Votre sécurité est notre priorité 🛡️\nEnvironnement sécurisé 24h/24.` },
+    { keys:['fréd','fred','fredy','développeur','developpeur','site','webmaster'],
+      reply:`Ce site a été conçu par Frédy Amoussou 🌐\nPour toute demande technique :`,
+      quick:[{ label:'💻 Contacter Frédy', url:`${WA_FREDY}?text=${encodeURIComponent('Bonjour Frédy, je vous contacte au sujet du site Mèfinlo Ghouse.')}` }] },
+    { keys:['merci','super','génial','parfait','ok'],
+      reply:`Avec plaisir ! 😊\nBon séjour à Mèfinlo Ghouse !` },
+    { keys:['au revoir','bye','à plus','ciao'],
+      reply:`Merci de votre visite ! 👋\nÀ très bientôt 🌿` }
   ];
 
   const quickRepliesInitial = [
@@ -956,15 +914,12 @@ footer{background:var(--footer-dark);color:#fff}
     { label:'📱 Réserver', msg:'Je veux réserver' }
   ];
 
-  // Ajouter un message
   const addMsg = (text, from = 'bot', quick = []) => {
     const div = document.createElement('div');
     div.className = `chat-msg ${from}`;
-    div.innerHTML = `
-      <div class="chat-msg-avatar">${from === 'bot' ? '🤖' : '👤'}</div>
-      <div class="chat-msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
+    const avatar = from === 'bot' ? '🤖' : '👤';
+    div.innerHTML = `<div class="chat-msg-avatar">${avatar}</div><div class="chat-msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
     chatBody.appendChild(div);
-    // Quick replies inside message
     if (quick.length) {
       const q = document.createElement('div');
       q.className = 'chat-quick';
@@ -983,7 +938,6 @@ footer{background:var(--footer-dark);color:#fff}
     chatBody.scrollTop = chatBody.scrollHeight;
   };
 
-  // Indicateur de frappe
   const showTyping = () => {
     const t = document.createElement('div');
     t.className = 'chat-msg bot';
@@ -992,39 +946,26 @@ footer{background:var(--footer-dark);color:#fff}
     chatBody.appendChild(t);
     chatBody.scrollTop = chatBody.scrollHeight;
   };
-  const hideTyping = () => {
-    const t = document.getElementById('typingIndicator');
-    if (t) t.remove();
-  };
+  const hideTyping = () => { const t = document.getElementById('typingIndicator'); if (t) t.remove(); };
 
-  // Trouver une réponse
   const findReply = (input) => {
     const txt = input.toLowerCase().trim();
-    for (const item of botKnowledge) {
-      if (item.keys.some(k => txt.includes(k))) return item;
-    }
+    for (const item of botKnowledge) if (item.keys.some(k => txt.includes(k))) return item;
     return null;
   };
 
-  // Gérer un message utilisateur
   const handleUser = (text) => {
     addMsg(text, 'user');
     showTyping();
     setTimeout(() => {
       hideTyping();
       const found = findReply(text);
-      if (found) {
-        addMsg(found.reply, 'bot', found.quick || []);
-      } else {
-        addMsg(`Je n'ai pas bien compris votre demande 🤔\n\nVoici ce que je peux faire :\n• Donner les tarifs\n• Indiquer la localisation\n• Décrire nos chambres\n• Vous aider à réserver\n\nOu contactez-nous directement sur WhatsApp :`,
-          'bot',
-          [{ label:'📱 Contacter sur WhatsApp', url:`${WHATSAPP}?text=${encodeURIComponent('Bonjour Mèfinlo Ghouse, j\'ai une question : ')}` }]
-        );
-      }
+      if (found) addMsg(found.reply, 'bot', found.quick || []);
+      else addMsg(`Je n'ai pas bien compris 🤔\n\nJe peux vous aider sur :\n• Les tarifs\n• La localisation\n• Les chambres\n• La réservation\n\nOu contactez-nous directement :`, 'bot',
+        [{ label:'📱 WhatsApp', url:`${WHATSAPP}?text=${encodeURIComponent('Bonjour Mèfinlo Ghouse, j\'ai une question.')}` }]);
     }, 700 + Math.random() * 400);
   };
 
-  // Afficher les quick replies de départ
   const renderInitialQuick = () => {
     chatQuick.innerHTML = '';
     quickRepliesInitial.forEach(q => {
@@ -1035,7 +976,6 @@ footer{background:var(--footer-dark);color:#fff}
     });
   };
 
-  // Ouvrir / fermer le chat
   const openChat = () => {
     chatWindow.classList.add('open');
     chatToggle.setAttribute('aria-expanded', 'true');
@@ -1043,7 +983,7 @@ footer{background:var(--footer-dark);color:#fff}
     if (!chatBody.dataset.initialized) {
       chatBody.dataset.initialized = '1';
       setTimeout(() => {
-        addMsg(`Bonjour et bienvenue à Mèfinlo Ghouse 🌿\n\nJe suis votre assistant virtuel. Comment puis-je vous aider ?`, 'bot');
+        addMsg(`Bonjour et bienvenue à Mèfinlo Ghouse 🌿\n\nJe suis votre assistant. Comment puis-je vous aider ?`, 'bot');
         renderInitialQuick();
       }, 300);
     }
@@ -1067,12 +1007,10 @@ footer{background:var(--footer-dark);color:#fff}
     chatInput.value = '';
   });
 
-  // Notification badge après 8s
   setTimeout(() => {
     if (!chatWindow.classList.contains('open')) chatToggle.classList.add('has-msg');
   }, 8000);
 
-  // Exposer pour les pages internes
   window.MG = { handleUser, addMsg };
 
 })();
