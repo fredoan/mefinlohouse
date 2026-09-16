@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+  xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+    http://www.google.com/schemas/sitemap-image/1.1
+    http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd
+    http://www.google.com/schemas/sitemap-video/1.1
+    http://www.google.com/schemas/sitemap-video/1.1/sitemap-video.xsd">
+
+  <!-- ============================================ -->
+  <!-- Page d'accueil — priorité maximale           -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.mghabomey.com/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.mghabomey.com/photo1.jpg</image:loc>
+      <image:title>Mèfinlo Ghouse — Hébergement à Bohicon-Abomey</image:title>
+      <image:caption>Vue extérieure de Mèfinlo Ghouse sur le pavé de Djègbè</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mghabomey.com/photo2.jpg</image:loc>
+      <image:title>Jardin verdoyant Mèfinlo Ghouse</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Page Hébergements — forte priorité           -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.mghabomey.com/hebergements.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.mghabomey.com/photo6.jpg</image:loc>
+      <image:title>Studio Ventilé — Mèfinlo Ghouse</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mghabomey.com/photo4.jpg</image:loc>
+      <image:title>Studio Climatisé — Mèfinlo Ghouse</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mghabomey.com/photo5.jpg</image:loc>
+      <image:title>Chambre-Salon Ventilée — Mèfinlo Ghouse</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mghabomey.com/photo7.jpg</image:loc>
+      <image:title>Chambre-Salon Climatisée — Mèfinlo Ghouse</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.mghabomey.com/photo8.jpg</image:loc>
+      <image:title>Suite 2 Chambres-Salon — Mèfinlo Ghouse</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Page Galerie — priorité élevée               -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.mghabomey.com/galerie.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <video:video>
+      <video:thumbnail_loc>https://www.mghabomey.com/pub-poster.jpg</video:thumbnail_loc>
+      <video:title>Vidéo publicitaire — Mèfinlo Ghouse</video:title>
+      <video:description>Découvrez l'ambiance de Mèfinlo Ghouse à Bohicon-Abomey en vidéo : chambres, jardin et services.</video:description>
+      <video:content_loc>https://www.mghabomey.com/pub.mp4</video:content_loc>
+      <video:duration>60</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Page Réservation — forte priorité            -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.mghabomey.com/reservation.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Page Contact — priorité moyenne-haute        -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.mghabomey.com/contact.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
