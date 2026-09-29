@@ -10,8 +10,11 @@
 <meta name="geo.placename" content="Bohicon-Abomey">
 <meta name="geo.position" content="6.3654;2.4183">
 <meta name="ICBM" content="6.3654, 2.4183">
+<meta name="format-detection" content="telephone=yes">
 <link rel="canonical" href="https://www.mghabomey.com/reservation.html">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BJ">
+<meta property="og:site_name" content="Mèfinlo Ghouse">
 <meta property="og:title" content="Réservation en ligne — Mèfinlo Ghouse">
 <meta property="og:description" content="Réservez votre hébergement en 30 secondes via WhatsApp. Réponse immédiate.">
 <meta property="og:url" content="https://www.mghabomey.com/reservation.html">
@@ -138,12 +141,13 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .res-notice{background:#fffbeb;border-left:4px solid #f59e0b;padding:.9rem 1.1rem;border-radius:.5rem;font-size:.8rem;color:#78350f;margin-top:1.5rem;line-height:1.55}
 .res-notice strong{color:#92400e}
 .contact-cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
-@media(min-width:640px){.contact-cards{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:640px){.contact-cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.contact-cards{grid-template-columns:repeat(4,1fr)}}
 .contact-card{display:flex;align-items:center;gap:.75rem;background:#fff;border:1px solid #f3f4f6;border-radius:.75rem;padding:1rem;box-shadow:var(--shadow-md);transition:all .2s}
 .contact-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
 .contact-icon{width:2.5rem;height:2.5rem;border-radius:.75rem;background:#f9fafb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
 .contact-card small{display:block;font-size:.7rem;color:var(--text-gray)}
-.contact-card strong{font-size:.85rem;color:var(--dark)}
+.contact-card strong{font-size:.85rem;color:var(--dark);word-break:break-word}
 .steps-info{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:2.5rem}
 @media(min-width:640px){.steps-info{grid-template-columns:repeat(3,1fr)}}
 .step-card{background:#fff;border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow-md);text-align:center;border-top:4px solid var(--primary)}
@@ -185,7 +189,8 @@ footer{background:var(--footer-dark);color:#fff}
 .footer-col ul a:hover{opacity:1}
 .footer-contact li{display:flex;gap:.5rem;font-size:.875rem;opacity:.75;line-height:1.5;margin-bottom:.75rem}
 .footer-contact i{color:var(--primary);margin-top:.15rem;flex-shrink:0;font-style:normal}
-.footer-contact a{opacity:1}
+.footer-contact a{opacity:1;word-break:break-word}
+.footer-contact a:hover{color:var(--primary)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
 @media(min-width:640px){.footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}}
 .footer-bottom p{font-size:.75rem;opacity:.6}
@@ -253,38 +258,42 @@ footer{background:var(--footer-dark);color:#fff}
 @keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
 <header id="header">
   <div class="container nav">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">🏠</span>
+    <a href="index.html" class="logo" aria-label="Mèfinlo Ghouse - Accueil">
+      <span class="logo-icon" aria-hidden="true">🏠</span>
       <span>Mèfinlo Ghouse</span>
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="hebergements.html">Hébergements</a>
       <a href="galerie.html">Galerie</a>
-      <a href="reservation.html" class="active">Réservation</a>
+      <a href="reservation.html" class="active" aria-current="page">Réservation</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="btn-reserve" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       <span>Réserver</span>
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <nav>
+    <nav aria-label="Navigation mobile">
       <a href="index.html">Accueil</a>
       <a href="hebergements.html">Hébergements</a>
       <a href="galerie.html">Galerie</a>
       <a href="reservation.html" class="active">Réservation</a>
       <a href="contact.html">Contact</a>
       <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse" class="wa-mobile" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Réserver via WhatsApp</span>
       </a>
     </nav>
@@ -328,7 +337,7 @@ footer{background:var(--footer-dark);color:#fff}
     </div>
 
     <div class="reservation-box reveal">
-      <div class="res-recap" id="recap">
+      <div class="res-recap" id="recap" aria-live="polite">
         <h4>📋 Récapitulatif</h4>
         <div class="res-recap-row"><span>Hébergement</span><span id="recapHeb">—</span></div>
         <div class="res-recap-row"><span>Ventilation</span><span id="recapVent">Ventilé</span></div>
@@ -342,15 +351,15 @@ footer{background:var(--footer-dark);color:#fff}
       <div class="res-step">
         <p class="res-step-title"><span class="res-step-num">2</span>Type de ventilation</p>
         <div class="res-toggle" id="resVentilation">
-          <button data-value="Ventilé" class="selected">💨 Ventilé</button>
-          <button data-value="Climatisé">❄️ Climatisé</button>
+          <button type="button" data-value="Ventilé" class="selected">💨 Ventilé</button>
+          <button type="button" data-value="Climatisé">❄️ Climatisé</button>
         </div>
       </div>
       <div class="res-step">
         <p class="res-step-title"><span class="res-step-num">3</span>Durée du séjour</p>
         <div class="res-toggle" id="resDuree">
-          <button data-value="Nuitée" class="selected">🌙 Nuitée</button>
-          <button data-value="3 heures (détente)">🕒 3 heures (détente)</button>
+          <button type="button" data-value="Nuitée" class="selected">🌙 Nuitée</button>
+          <button type="button" data-value="3 heures (détente)">🕒 3 heures (détente)</button>
         </div>
       </div>
       <div class="res-step">
@@ -359,11 +368,11 @@ footer{background:var(--footer-dark);color:#fff}
       </div>
       <div class="res-step">
         <p class="res-step-title"><span class="res-step-num">5</span>Votre nom (optionnel)</p>
-        <input type="text" id="resNom" placeholder="Ex : Adjovi Koffi" style="width:100%;padding:.85rem 1rem;border:2px solid #e5e7eb;background:#fff;border-radius:.75rem;font-size:.9rem;outline:none;transition:border-color .2s" aria-label="Votre nom">
+        <input type="text" id="resNom" placeholder="Ex : Adjovi Koffi" style="width:100%;padding:.85rem 1rem;border:2px solid #e5e7eb;background:#fff;border-radius:.75rem;font-size:.9rem;outline:none;transition:border-color .2s" aria-label="Votre nom" autocomplete="name">
       </div>
 
-      <button class="res-submit" id="resSubmit">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <button class="res-submit" id="resSubmit" type="button">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Envoyer ma demande sur WhatsApp</span>
       </button>
       <p class="res-note">🔒 Réponse garantie en moins de 30 minutes · Aucun paiement en ligne requis</p>
@@ -375,17 +384,21 @@ footer{background:var(--footer-dark);color:#fff}
 
     <div class="contact-cards reveal">
       <a href="https://wa.me/22901678216" target="_blank" rel="noopener" class="contact-card">
-        <div class="contact-icon" style="color:var(--wa-green)">
+        <div class="contact-icon" style="color:var(--wa-green)" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </div>
         <div><small>WhatsApp</small><strong>01 67 82 16 16</strong></div>
       </a>
       <a href="tel:+22901447979" class="contact-card">
-        <div class="contact-icon" style="color:var(--primary)">📞</div>
+        <div class="contact-icon" style="color:var(--primary)" aria-hidden="true">📞</div>
         <div><small>Appel direct</small><strong>01 44 79 79 01</strong></div>
       </a>
+      <a href="mailto:mghabomey@gmail.com" class="contact-card">
+        <div class="contact-icon" style="color:var(--primary)" aria-hidden="true">✉️</div>
+        <div><small>Email</small><strong>mghabomey@gmail.com</strong></div>
+      </a>
       <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="contact-card">
-        <div class="contact-icon">📍</div>
+        <div class="contact-icon" aria-hidden="true">📍</div>
         <div><small>Adresse</small><strong>Sogbo Aliho, Von · Djègbé</strong></div>
       </a>
     </div>
@@ -400,28 +413,28 @@ footer{background:var(--footer-dark);color:#fff}
     </div>
     <div class="grid grid-2 reveal">
       <div class="info-card" style="padding:1.25rem">
-        <div class="info-card-icon pink">🕒</div>
+        <div class="info-card-icon pink" aria-hidden="true">🕒</div>
         <div class="info-card-body">
           <strong>Arrivée & départ</strong>
           <p>Arrivée flexible 24h/24 — départ avant 12h</p>
         </div>
       </div>
       <div class="info-card" style="padding:1.25rem">
-        <div class="info-card-icon green">💳</div>
+        <div class="info-card-icon green" aria-hidden="true">💳</div>
         <div class="info-card-body">
           <strong>Paiement</strong>
           <p>Espèces (FCFA) à l'arrivée — aucun prépaiement</p>
         </div>
       </div>
       <div class="info-card" style="padding:1.25rem">
-        <div class="info-card-icon pink">🛡️</div>
+        <div class="info-card-icon pink" aria-hidden="true">🛡️</div>
         <div class="info-card-body">
           <strong>Sécurité</strong>
           <p>Environnement sécurisé 24h/24</p>
         </div>
       </div>
       <div class="info-card" style="padding:1.25rem">
-        <div class="info-card-icon green">🚗</div>
+        <div class="info-card-icon green" aria-hidden="true">🚗</div>
         <div class="info-card-body">
           <strong>Parking</strong>
           <p>Stationnement gratuit sur place</p>
@@ -441,7 +454,7 @@ footer{background:var(--footer-dark);color:#fff}
         <p>Contactez-nous directement sur WhatsApp — réponse en moins de 30 min</p>
       </div>
       <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20r%C3%A9server." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Réserver maintenant</span>
       </a>
     </div>
@@ -450,10 +463,10 @@ footer{background:var(--footer-dark);color:#fff}
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="footer-brand"><span class="footer-brand-icon">🏠</span><span>Mèfinlo Ghouse</span></div>
+          <div class="footer-brand"><span class="footer-brand-icon" aria-hidden="true">🏠</span><span>Mèfinlo Ghouse</span></div>
           <p class="footer-desc">Votre havre de paix à Bohicon. Studios, chambres-salon et suites familiales au cœur de Djègbè.</p>
-          <form class="newsletter" id="newsletter">
-            <input type="email" placeholder="Votre email" required name="email" aria-label="Votre email">
+          <form class="newsletter" id="newsletter" aria-label="Inscription newsletter">
+            <input type="email" placeholder="Votre email" required name="email" aria-label="Votre email" autocomplete="email">
             <button type="submit" aria-label="S'inscrire">✈️</button>
           </form>
         </div>
@@ -479,28 +492,30 @@ footer{background:var(--footer-dark);color:#fff}
         <div class="footer-col">
           <h4>Contact</h4>
           <ul class="footer-contact">
-            <li>📍<span>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</span></li>
-            <li>📞<a href="tel:+22901678216">01 67 82 16 16</a></li>
-            <li>📞<a href="tel:+22901447979">01 44 79 79 01</a></li>
-            <li>🕒<span>Ouvert 24h/24 — 7j/7</span></li>
+            <li><i aria-hidden="true">📍</i><span>Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)</span></li>
+            <li><i aria-hidden="true">📞</i><a href="tel:+22901678216">01 67 82 16 16</a></li>
+            <li><i aria-hidden="true">📞</i><a href="tel:+22901447979">01 44 79 79 01</a></li>
+            <li><i aria-hidden="true">✉️</i><a href="mailto:mghabomey@gmail.com">mghabomey@gmail.com</a></li>
+            <li><i aria-hidden="true">🕒</i><span>Ouvert 24h/24 — 7j/7</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon).</p>
+        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon).</p>
         <div class="footer-social">
-          <a href="https://facebook.com/" target="_blank" rel="nofollow noopener" aria-label="Facebook">📘</a>
-          <a href="https://instagram.com/" target="_blank" rel="nofollow noopener" aria-label="Instagram">📷</a>
-          <a href="https://wa.me/22901678216" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://www.facebook.com/share/1MNXPZjLee/" target="_blank" rel="noopener" aria-label="Page Facebook de Mèfinlo Ghouse">📘</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Mèfinlo Ghouse">📷</a>
+          <a href="https://wa.me/22901678216" target="_blank" rel="noopener" aria-label="WhatsApp de Mèfinlo Ghouse">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="nofollow noopener" aria-label="Google Maps">🗺️</a>
+          <a href="mailto:mghabomey@gmail.com" aria-label="Envoyer un email à Mèfinlo Ghouse">✉️</a>
+          <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" aria-label="Localisation Google Maps">🗺️</a>
         </div>
       </div>
       <div class="footer-credit">
         <span>Conçu & développé par <strong>Frédy Amoussou</strong></span>
         <a href="https://wa.me/2290152552106?text=Bonjour%20Fr%C3%A9dy%2C%20je%20vous%20contacte%20au%20sujet%20du%20site%20M%C3%A8finlo%20Ghouse." target="_blank" rel="noopener" aria-label="Contacter Frédy Amoussou sur WhatsApp">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <span>+229 01 52 55 21 06</span>
         </a>
       </div>
@@ -509,19 +524,19 @@ footer{background:var(--footer-dark);color:#fff}
 </footer>
 
 <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="wa-float" target="_blank" rel="noopener" aria-label="Contacter via WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="wa-float-label">Besoin d'aide ? Discutons !</span>
 </a>
 
-<button class="chat-toggle" id="chatToggle" aria-label="Ouvrir le chatbot" aria-expanded="false">
-  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+<button class="chat-toggle" id="chatToggle" aria-label="Ouvrir le chatbot" aria-expanded="false" aria-controls="chatWindow">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
   <span class="chat-badge"></span>
 </button>
 
-<div class="chat-window" id="chatWindow" role="dialog" aria-label="Chatbot Mèfinlo Ghouse">
+<div class="chat-window" id="chatWindow" role="dialog" aria-modal="false" aria-label="Chatbot Mèfinlo Ghouse">
   <div class="chat-header">
     <div class="chat-header-avatar">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
     </div>
     <div class="chat-header-info">
       <strong>Assistant Mèfinlo</strong>
@@ -534,7 +549,7 @@ footer{background:var(--footer-dark);color:#fff}
   <form class="chat-footer" id="chatForm">
     <input type="text" id="chatInput" placeholder="Écrivez votre message..." autocomplete="off" aria-label="Message">
     <button type="submit" class="chat-send" aria-label="Envoyer">
-      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
     </button>
   </form>
 </div>
@@ -546,9 +561,11 @@ footer{background:var(--footer-dark);color:#fff}
   const WHATSAPP = 'https://wa.me/22901678216';
   const PHONE1 = '+22901678216';
   const PHONE2 = '+22901447979';
+  const EMAIL = 'mghabomey@gmail.com';
+  const FACEBOOK = 'https://www.facebook.com/share/1MNXPZjLee/';
   const WA_FREDY = 'https://wa.me/2290152552106';
   const MAPS_LINK = 'https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb';
-  const ADRESSE = "Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)";
+  const ADRESSE = "Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)";
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -571,7 +588,7 @@ footer{background:var(--footer-dark);color:#fff}
     }));
   }
 
-  // ============ HÉBERGEMENTS (tarifs mis à jour) ============
+  // ============ HÉBERGEMENTS ============
   const hebergements = [
     { titre:'Studio Ventilé',                prix:'13 000' },
     { titre:'Studio Climé',                  prix:'15 000' },
@@ -661,7 +678,8 @@ footer{background:var(--footer-dark);color:#fff}
   if (nl) {
     nl.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Merci ! Votre email a été enregistré.');
+      const email = nl.querySelector('input').value;
+      alert(`Merci ! Votre email "${email}" a été enregistré.`);
       nl.reset();
     });
   }
@@ -700,27 +718,32 @@ footer{background:var(--footer-dark);color:#fff}
       reply:`Tarifs par nuitée 🌙\n\n• Studio Ventilé : 13 000 FCFA\n• Studio Climé : 15 000 FCFA (2 nuits : 30 000)\n• Chambre-Salon Ventilée ou Climatisée : 13 000 à 20 000 FCFA\n• 02 Chambres-Salon : à partir de 30 000 FCFA` },
     { keys:['date','arrivée','arrivee','quand'],
       reply:`Indiquez votre date d'arrivée dans le champ 📅 Date d'arrivée du formulaire ci-dessus.\n\nNous sommes ouverts 24h/24 — vous pouvez arriver à toute heure !` },
-    { keys:['contact','téléphone','appel','numéro','numero'],
-      reply:`📞 WhatsApp : ${PHONE1}\n📞 Appel : ${PHONE2}`,
-      quick:[{ label:'📱 WhatsApp', url:WHATSAPP }] },
+    { keys:['contact','téléphone','telephone','appel','numéro','numero','email','mail'],
+      reply:`📞 WhatsApp : ${PHONE1}\n📞 Appel : ${PHONE2}\n✉️ Email : ${EMAIL}`,
+      quick:[{ label:'📱 WhatsApp', url:WHATSAPP },{ label:'✉️ Envoyer un email', url:`mailto:${EMAIL}` }] },
+    { keys:['facebook','fb','page'],
+      reply:`Retrouvez-nous sur notre page Facebook officielle 📘`,
+      quick:[{ label:'📘 Page Facebook', url:FACEBOOK }] },
     { keys:['horaire','ouvert','heure'],
       reply:`Ouvert 24h/24 — 7j/7 🕒` },
     { keys:['sécur','secur','gardien'],
       reply:`Environnement sécurisé 24h/24 🛡️` },
     { keys:['jardin','verdoyant','vert'],
       reply:`Nous avons un magnifique Jardin Verdoyant 🌿` },
+    { keys:['chambre','studio','hébergement','hebergement','suite','salon','type'],
+      reply:`Nous proposons 5 types d'hébergements 🏠\n\n• Studio Ventilé (1-2 pers.)\n• Studio Climé (1-2 pers.)\n• Chambre-Salon Ventilée (2-3 pers.)\n• Chambre-Salon Climatisée (2-3 pers.)\n• Suite 02 Chambres-Salon (4-6 pers.)` },
     { keys:['paiement','payer','espèce','espece','carte'],
       reply:`Paiement en espèces (FCFA) à l'arrivée 💵\nAucun paiement en ligne requis.` },
     { keys:['parking','voiture','garer'],
       reply:`Oui ! Stationnement gratuit et sécurisé sur place 🚗` },
     { keys:['manifestation','courant','électricité','electricite'],
       reply:`📝 NB : Le Prix des chambres pour une manifestation diffère selon le type d'occupation et le courant est à la charge du client pour les séjours.` },
-    { keys:['fréd','fred','fredy','développeur','developpeur','site'],
+    { keys:['fréd','fred','fredy','développeur','developpeur','site','webmaster'],
       reply:`Ce site a été conçu par Frédy Amoussou 🌐`,
       quick:[{ label:'💻 Contacter Frédy', url:`${WA_FREDY}?text=${encodeURIComponent('Bonjour Frédy, je vous contacte au sujet du site Mèfinlo Ghouse.')}` }] },
-    { keys:['merci','super','parfait','ok'],
+    { keys:['merci','super','génial','parfait','ok'],
       reply:`Avec plaisir ! 😊` },
-    { keys:['au revoir','bye','à plus'],
+    { keys:['au revoir','bye','à plus','ciao'],
       reply:`Merci de votre visite ! 👋` }
   ];
 
@@ -735,7 +758,7 @@ footer{background:var(--footer-dark);color:#fff}
     const div = document.createElement('div');
     div.className = `chat-msg ${from}`;
     const avatar = from === 'bot' ? '🤖' : '👤';
-    div.innerHTML = `<div class="chat-msg-avatar">${avatar}</div><div class="chat-msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
+    div.innerHTML = `<div class="chat-msg-avatar" aria-hidden="true">${avatar}</div><div class="chat-msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
     chatBody.appendChild(div);
     if (quick.length) {
       const q = document.createElement('div');
@@ -759,7 +782,7 @@ footer{background:var(--footer-dark);color:#fff}
     const t = document.createElement('div');
     t.className = 'chat-msg bot';
     t.id = 'typingIndicator';
-    t.innerHTML = `<div class="chat-msg-avatar">🤖</div><div class="chat-typing"><span></span><span></span><span></span></div>`;
+    t.innerHTML = `<div class="chat-msg-avatar" aria-hidden="true">🤖</div><div class="chat-typing"><span></span><span></span><span></span></div>`;
     chatBody.appendChild(t);
     chatBody.scrollTop = chatBody.scrollHeight;
   };
@@ -816,6 +839,10 @@ footer{background:var(--footer-dark);color:#fff}
   });
   chatClose.addEventListener('click', closeChat);
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && chatWindow.classList.contains('open')) closeChat();
+  });
+
   chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const val = chatInput.value.trim();
@@ -828,7 +855,7 @@ footer{background:var(--footer-dark);color:#fff}
     if (!chatWindow.classList.contains('open')) chatToggle.classList.add('has-msg');
   }, 8000);
 
-  window.MG = { handleUser, addMsg };
+  window.MG = { handleUser, addMsg, EMAIL, FACEBOOK };
 
 })();
 </script>
