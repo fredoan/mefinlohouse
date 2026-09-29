@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mèfinlo Ghouse — Hébergement & Détente à Bohicon-Abomey</title>
-<meta name="description" content="Studios, chambres-salon et suites à Mèfinlo Ghouse. Espace vert, options 2h ou nuitée, réservation en ligne. Téléphone : 01 67 82 16 16.">
-<meta name="keywords" content="Mèfinlo Ghouse, hébergement Bohicon, motel pavé Djègbè, location nuit Sogbo-Aliho, studio ventilé Bohicon, chambre-salon climatisée">
+<meta name="description" content="Studios, chambres-salon et suites à Mèfinlo Ghouse. Jardin Verdoyant, options 3h ou nuitée, réservation WhatsApp. Tél : 01 67 82 16 16.">
+<meta name="keywords" content="Mèfinlo Ghouse, hébergement Bohicon, motel pavé Djègbè, location nuit Sogbo-Aliho, studio ventilé Bohicon, chambre-salon climatisée, Jardin Verdoyant">
 <meta name="geo.region" content="BJ-LI">
 <meta name="geo.placename" content="Bohicon-Abomey">
 <meta name="geo.position" content="6.3654;2.4183">
@@ -13,9 +13,9 @@
 <link rel="canonical" href="https://www.mghabomey.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mèfinlo Ghouse — Hébergement & Détente à Bohicon-Abomey">
-<meta property="og:description" content="Studios, chambres-salon et suites. Espace vert, options 2h ou nuitée.">
+<meta property="og:description" content="Studios, chambres-salon et suites. Jardin Verdoyant, options 3h ou nuitée.">
 <meta property="og:url" content="https://www.mghabomey.com/">
-<meta property="og:image" content="https://www.mghabomey.com/photo1.jpg">
+<meta property="og:image" content="https://www.mghabomey.com/jv1.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1a3d2e">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23ff6b81'/%3E%3Ctext x='50' y='65' font-size='55' text-anchor='middle' fill='white'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E">
@@ -24,16 +24,16 @@
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "name": "Mèfinlo Ghouse",
-  "image": "https://www.mghabomey.com/photo1.jpg",
+  "image": "https://www.mghabomey.com/jv1.jpeg",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Carrefour Sogbo-Aliho, Von, en face de la Banque de Sang, Pavé de Djègbè",
+    "streetAddress": "Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)",
     "addressLocality": "Bohicon-Abomey",
     "addressCountry": "BJ"
   },
   "geo": {"@type":"GeoCoordinates","latitude":"6.3654","longitude":"2.4183"},
   "telephone": "+229-01-67-82-16-16",
-  "priceRange": "5000-20000 FCFA",
+  "priceRange": "5000-30000 FCFA",
   "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"150"},
   "openingHours": "Mo-Su 00:00-23:59"
 }
@@ -108,7 +108,7 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.4),rgba(0,0,0,.7));z-index:1}
 .hero-content{position:relative;z-index:2;max-width:900px;padding:6rem 1rem 4rem;width:100%}
-.hero-location{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.15);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3);padding:.5rem 1rem;border-radius:999px;margin-bottom:1.5rem;font-size:.8rem;font-weight:500}
+.hero-location{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.15);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.3);padding:.5rem 1rem;border-radius:999px;margin-bottom:1.5rem;font-size:.8rem;font-weight:500;max-width:90%}
 @media(min-width:640px){.hero-location{font-size:.9rem}}
 .hero h1{font-size:clamp(1.9rem,6vw,4.5rem);font-weight:800;line-height:1.1;margin-bottom:1rem;text-shadow:0 4px 6px rgba(0,0,0,.3)}
 .hero h1 span{display:block;color:var(--primary);margin-top:.25rem}
@@ -150,9 +150,22 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
 .price{font-size:1.5rem;font-weight:700;color:var(--primary);line-height:1}
 .price small{font-size:.7rem;color:var(--text-gray);font-weight:400;margin-left:.15rem}
-.price-2h{font-size:.75rem;color:var(--text-gray)}
-.price-2h strong{color:var(--primary)}
+.price-3h{font-size:.75rem;color:var(--text-gray)}
+.price-3h strong{color:var(--primary)}
 .price-note{font-size:.75rem;color:var(--secondary);font-weight:600;margin-top:.35rem}
+/* --- Galerie animée --- */
+.gallery-strip{position:relative;overflow:hidden;padding:1rem 0;background:var(--bg-warm)}
+.gallery-track{display:flex;gap:1rem;animation:scrollGallery 90s linear infinite;width:max-content}
+.gallery-strip:hover .gallery-track{animation-play-state:paused}
+.gallery-track img{width:16rem;height:11rem;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow-md);flex-shrink:0;transition:transform .3s}
+.gallery-track img:hover{transform:scale(1.03)}
+@media(max-width:640px){.gallery-track img{width:12rem;height:8.5rem}}
+@keyframes scrollGallery{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.gallery-cta{display:flex;justify-content:center;margin-top:2rem}
+/* --- Fin galerie --- */
 .reviews-wrap{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);overflow:hidden;max-width:56rem;margin:0 auto}
 .review-slide{display:none;grid-template-columns:1fr}
 .review-slide.active{display:grid}
@@ -227,6 +240,8 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .res-submit:hover{background:#267a47}
 .res-submit:active{transform:scale(.98)}
 .res-note{text-align:center;font-size:.75rem;color:var(--text-gray);margin-top:1rem}
+.res-notice{background:#fffbeb;border-left:4px solid #f59e0b;padding:.75rem 1rem;border-radius:.5rem;font-size:.8rem;color:#78350f;margin-top:1rem;line-height:1.5}
+.res-notice strong{color:#92400e}
 .contact-cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
 @media(min-width:640px){.contact-cards{grid-template-columns:repeat(3,1fr)}}
 .contact-card{display:flex;align-items:center;gap:.75rem;background:#fff;border:1px solid #f3f4f6;border-radius:.75rem;padding:1rem;box-shadow:var(--shadow-md);transition:all .2s}
@@ -384,16 +399,17 @@ footer{background:var(--footer-dark);color:#fff}
 
 <main>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
-  <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg">
+  <video id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="jv1.jpeg">
     <source src="hero.mp4" type="video/mp4">
   </video>
   <div class="hero-content">
     <div class="hero-location">
-      <span>📍</span><span>Sur le pavé de Djègbè, Bohicon-Abomey, Bénin</span>
+      <span>📍</span><span>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</span>
     </div>
     <h1>Mèfinlo Ghouse<span>Hébergement & Détente</span></h1>
-    <p>Studios, Chambre-Salon et 2 Chambres — Réservez <strong>2h ou une nuitée</strong>. Calme, jardin verdoyant, proche Carrefour Sogbo-Aliho.</p>
+    <p>Studios, Chambre-Salon et 2 Chambres-Salon — Réservez <strong>3h ou une nuitée</strong>. Calme, Jardin Verdoyant, proche Carrefour Sogbo Aliho.</p>
     <div class="hero-buttons">
       <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="btn btn-primary" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -406,12 +422,13 @@ footer{background:var(--footer-dark);color:#fff}
     <div class="hero-badges">
       <span>🕒 Ouvert 24h/24</span>
       <span>🛡️ Sécurisé</span>
-      <span>🌿 Jardin verdoyant</span>
+      <span>🌿 Jardin Verdoyant</span>
     </div>
   </div>
   <button class="video-toggle" id="videoToggle" aria-label="Pause ou lecture de la vidéo">⏸</button>
 </section>
 
+<!-- ================= HÉBERGEMENTS ================= -->
 <section class="section" id="hebergements" style="background:var(--bg-light)">
   <div class="container">
     <div class="section-title reveal">
@@ -420,9 +437,33 @@ footer{background:var(--footer-dark);color:#fff}
       <p>Studios confortables, chambres-salon spacieuses et suites familiales — options ventilées ou climatisées</p>
     </div>
     <div class="grid grid-3" id="hebergementsGrid"></div>
+
+    <div class="res-notice reveal" style="max-width:56rem;margin:2.5rem auto 0">
+      <strong>📝 NB :</strong> Le Prix des chambres pour une manifestation diffère selon le type d'occupation et le courant est à la charge du client pour les séjours. En effet les prix ne sont pas fixes comme mentionné ci-dessus.
+    </div>
   </div>
 </section>
 
+<!-- ================= GALERIE ANIMÉE (défilement) ================= -->
+<section class="section" style="background:var(--bg-warm);padding-bottom:2rem">
+  <div class="container">
+    <div class="section-title reveal">
+      <span class="badge-pill green">En images</span>
+      <h2>Découvrez Mèfinlo Ghouse</h2>
+      <p>Un aperçu de nos espaces, de notre Jardin Verdoyant et de notre cadre paisible à Djègbé</p>
+    </div>
+  </div>
+  <div class="gallery-strip reveal">
+    <div class="gallery-track" id="galleryTrack"></div>
+  </div>
+  <div class="gallery-cta">
+    <a href="galerie.html" class="btn btn-pink">
+      <span>📸</span><span>Voir toute la galerie</span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= AVIS CLIENTS ================= -->
 <section class="section" style="background:var(--bg-warm)">
   <div class="container">
     <div class="section-title reveal">
@@ -440,26 +481,27 @@ footer{background:var(--footer-dark);color:#fff}
   </div>
 </section>
 
+<!-- ================= HISTOIRE / JARDIN ================= -->
 <section class="section" style="background:#fff">
   <div class="container">
     <div class="story">
       <div class="story-img reveal">
-        <img src="photo10.jpg" alt="Jardin verdoyant de Mèfinlo Ghouse" loading="lazy">
+        <img src="jv1.jpeg" alt="Jardin Verdoyant de Mèfinlo Ghouse" loading="lazy">
         <div class="story-badge">
           <i>🌿</i>
-          <div><strong>Jardin verdoyant</strong><small>Espace de détente unique</small></div>
+          <div><strong>Jardin Verdoyant</strong><small>Espace de détente unique</small></div>
         </div>
       </div>
       <div class="story-content reveal">
         <span class="badge-pill green">Notre histoire</span>
         <h2>Un havre de paix au cœur de Bohicon</h2>
-        <p><strong>Mèfinlo Ghouse</strong> est né de la volonté de créer un espace d'hébergement unique à <strong>Djègbè</strong>, alliant confort moderne et authenticité béninoise. Situé au cœur de Bohicon, notre établissement offre un <strong>jardin</strong> verdoyant où règne la tranquillité, loin de l'agitation urbaine.</p>
-        <p>Que ce soit pour une courte pause de 2h ou un séjour prolongé, nous nous engageons à offrir à chaque client une expérience mémorable, chaleureuse et sécurisée.</p>
+        <p><strong>Mèfinlo Ghouse</strong> est né de la volonté de créer un espace d'hébergement unique à <strong>Djègbé</strong>, alliant confort moderne et authenticité béninoise. Situé au cœur de Bohicon, notre établissement offre un <strong>Jardin Verdoyant</strong> où règne la tranquillité, loin de l'agitation urbaine.</p>
+        <p>Que ce soit pour une courte pause de <strong>3h</strong> ou un séjour prolongé, nous nous engageons à offrir à chaque client une expérience mémorable, chaleureuse et sécurisée.</p>
         <div class="story-features">
-          <div class="story-feature"><div class="story-feature-icon">📍</div><div><strong>Emplacement idéal</strong><small>Proche Carrefour Sogbo-Aliho</small></div></div>
-          <div class="story-feature"><div class="story-feature-icon">🕒</div><div><strong>Flexibilité totale</strong><small>Options 2h ou nuitée</small></div></div>
+          <div class="story-feature"><div class="story-feature-icon">📍</div><div><strong>Emplacement idéal</strong><small>Carrefour Sogbo Aliho, Von</small></div></div>
+          <div class="story-feature"><div class="story-feature-icon">🕒</div><div><strong>Flexibilité totale</strong><small>Options 3h ou nuitée</small></div></div>
           <div class="story-feature"><div class="story-feature-icon">🛡️</div><div><strong>Sécurité 24h/24</strong><small>Environnement sécurisé</small></div></div>
-          <div class="story-feature"><div class="story-feature-icon">🌿</div><div><strong>Espace vert</strong><small>Jardin paisible et fleuri</small></div></div>
+          <div class="story-feature"><div class="story-feature-icon">🌿</div><div><strong>Jardin Verdoyant</strong><small>Espace paisible et fleuri</small></div></div>
         </div>
         <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20voudrais%20en%20savoir%20plus." class="btn btn-pink" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -470,6 +512,7 @@ footer{background:var(--footer-dark);color:#fff}
   </div>
 </section>
 
+<!-- ================= RÉSERVATION ================= -->
 <section class="section" id="reservation" style="background:#fff">
   <div class="container" style="max-width:64rem">
     <div class="section-title reveal">
@@ -493,7 +536,7 @@ footer{background:var(--footer-dark);color:#fff}
         <p class="res-step-title"><span class="res-step-num">3</span>Durée du séjour</p>
         <div class="res-toggle" id="resDuree">
           <button data-value="Nuitée" class="selected">🌙 Nuitée</button>
-          <button data-value="2 heures">🕒 2 heures</button>
+          <button data-value="3 heures">🕒 3 heures</button>
         </div>
       </div>
       <button class="res-submit" id="resSubmit">
@@ -513,20 +556,21 @@ footer{background:var(--footer-dark);color:#fff}
         <div class="contact-icon" style="color:var(--primary)">📞</div>
         <div><small>Appel direct</small><strong>01 44 79 79 01</strong></div>
       </a>
-      <a href="https://maps.google.com/?q=6.3654,2.4183" target="_blank" rel="noopener" class="contact-card">
+      <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="contact-card">
         <div class="contact-icon">📍</div>
-        <div><small>Adresse</small><strong>Djègbè, Bohicon</strong></div>
+        <div><small>Adresse</small><strong>Carrefour Sogbo Aliho, Von</strong></div>
       </a>
     </div>
   </div>
 </section>
 
+<!-- ================= LOCALISATION ================= -->
 <section class="section" style="background:var(--bg-light)">
   <div class="container">
     <div class="section-title reveal">
       <span class="badge-pill green">Localisation</span>
       <h2>Trouvez-nous facilement</h2>
-      <p>Idéalement situé à Djègbè, proche du Carrefour Sogbo-Aliho, Bohicon-Abomey</p>
+      <p>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</p>
     </div>
     <div class="grid grid-2" style="align-items:start;gap:2rem">
       <div class="location-info reveal">
@@ -534,9 +578,9 @@ footer{background:var(--footer-dark);color:#fff}
           <div class="info-card-icon pink">📍</div>
           <div class="info-card-body">
             <strong>Adresse</strong>
-            <p>Carrefour Sogbo-Aliho, Von<br>En face de la Banque de Sang<br>Pavé de Djègbè, Bohicon(Abomey), Bénin</p>
+            <p>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</p>
           </div>
-          <a href="https://www.google.com/maps/search/?api=1&query=6.3654,2.4183" target="_blank" rel="noopener" class="info-card-arrow" aria-label="Ouvrir dans Google Maps">↗</a>
+          <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="info-card-arrow" aria-label="Ouvrir dans Google Maps">↗</a>
         </div>
         <div class="info-card">
           <div class="info-card-icon green">📞</div>
@@ -561,7 +605,7 @@ footer{background:var(--footer-dark);color:#fff}
             <p>Ouvert 24h/24 — 7j/7<br>Accueil permanent</p>
           </div>
         </div>
-        <a href="https://www.google.com/maps/search/?api=1&query=6.3654,2.4183" target="_blank" rel="noopener" class="btn btn-primary btn-block">🧭 Obtenir l'itinéraire Google Maps</a>
+        <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="btn btn-primary btn-block">🧭 Obtenir l'itinéraire Google Maps</a>
       </div>
       <div class="reveal">
         <iframe class="map-frame" src="https://www.google.com/maps?q=6.3654,2.4183&z=15&output=embed" loading="lazy" title="Localisation Mèfinlo Ghouse sur Google Maps" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
@@ -602,7 +646,7 @@ footer{background:var(--footer-dark);color:#fff}
             <li><a href="hebergements.html">Studios ventilés</a></li>
             <li><a href="hebergements.html">Studios climatisés</a></li>
             <li><a href="hebergements.html">Chambres-Salon</a></li>
-            <li><a href="hebergements.html">Suite 2 Chambres</a></li>
+            <li><a href="hebergements.html">Suite 2 Chambres-Salon</a></li>
             <li><a href="hebergements.html">Tarifs</a></li>
           </ul>
         </div>
@@ -618,7 +662,7 @@ footer{background:var(--footer-dark);color:#fff}
         <div class="footer-col">
           <h4>Contact</h4>
           <ul class="footer-contact">
-            <li>📍<span>Carrefour Sogbo-Aliho, Von<br>sur le pavé de Djègbè, Bohicon(Abomey)</span></li>
+            <li>📍<span>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</span></li>
             <li>📞<a href="tel:+22901678216">01 67 82 16 16</a></li>
             <li>📞<a href="tel:+22901447979">01 44 79 79 01</a></li>
             <li>🕒<span>Ouvert 24h/24 — 7j/7</span></li>
@@ -626,14 +670,14 @@ footer{background:var(--footer-dark);color:#fff}
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Sur le pavé de Djègbè, Bohicon(Abomey), Bénin.</p>
+        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon).</p>
         <div class="footer-social">
           <a href="https://facebook.com/" target="_blank" rel="nofollow noopener" aria-label="Facebook">📘</a>
           <a href="https://instagram.com/" target="_blank" rel="nofollow noopener" aria-label="Instagram">📷</a>
           <a href="https://wa.me/22901678216" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <a href="https://maps.google.com/" target="_blank" rel="nofollow noopener" aria-label="Google Maps">🗺️</a>
+          <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="nofollow noopener" aria-label="Google Maps">🗺️</a>
         </div>
       </div>
       <div class="footer-credit">
@@ -687,6 +731,8 @@ footer{background:var(--footer-dark);color:#fff}
   const PHONE1 = '+22901678216';
   const PHONE2 = '+22901447979';
   const WA_FREDY = 'https://wa.me/2290152552106';
+  const MAPS_LINK = 'https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb';
+  const ADRESSE = "Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)";
   const WA_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
 
   const yearEl = document.getElementById('year');
@@ -722,20 +768,108 @@ footer{background:var(--footer-dark);color:#fff}
     });
   }
 
+  // ============ GALERIE ANIMÉE : toutes les photos MÈFINLO ============
+  const photosMefinlo = [
+    'M%C3%88FINLO%20GHOUSE%20(3).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(4).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(5).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(6).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(7).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(8).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(9).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(10).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(11).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(12).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(13).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(14).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(15).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(16).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(17).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(18).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(20).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(21).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(22).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(23).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(24).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(25).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(26).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(28).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(30).jpg.jpeg',
+    'M%C3%88FINLO%20GHOUSE%20(31).jpg.jpeg',
+    'jv1.jpeg','jv2.jpeg',
+    'sventile.jpeg','sclime.jpeg',
+    'csalonventile.jpeg','csalonclime.jpeg',
+    '2csalon.jpeg'
+  ];
+  const galleryTrack = document.getElementById('galleryTrack');
+  if (galleryTrack) {
+    // On duplique pour un défilement infini sans "saut"
+    const imgsHTML = photosMefinlo.map((src, i) =>
+      `<img src="${src}" alt="Photo Mèfinlo Ghouse ${i+1}" loading="lazy">`
+    ).join('');
+    galleryTrack.innerHTML = imgsHTML + imgsHTML; // duplication
+  }
+  // ============ FIN GALERIE ============
+
   const hebergements = [
-    { tag:'Studio', titre:'Studio Ventilé', desc:"Espace confortable et aéré, idéal pour un séjour court ou une nuitée relaxante.", image:'photo6.jpg', prix:'5 000', prix2h:'3 000', note:'', features:['Ventilé','1-2 personnes','20m²','Salle de bain privée'] },
-    { tag:'Studio', titre:'Studio Climatisé', desc:"Confort optimal avec climatisation pour des nuits paisibles et reposantes.", image:'photo4.jpg', prix:'8 000', prix2h:null, note:'🎁 2 nuits : 15 000 FCFA', features:['Climatisé','1-2 personnes','22m²','Salle de bain privée'] },
-    { tag:'Chambre-Salon', titre:'Chambre-Salon Ventilée', desc:"Espace généreux avec salon séparé, parfait pour les séjours prolongés.", image:'photo5.jpg', prix:'10 000', prix2h:'5 000', note:'', features:['Ventilé','2-3 personnes','35m²','Salon séparé'] },
-    { tag:'Chambre-Salon', titre:'Chambre-Salon Climatisée', desc:"Luxe et confort avec climatisation dans un espace salon-chambre élégant.", image:'photo7.jpg', prix:'15 000', prix2h:'5 000', note:'', features:['Climatisé','2-3 personnes','38m²','Salon séparé'] },
-    { tag:'Suite Familiale', titre:'Suite 2 Chambres-Salon', desc:"Espace familial complet avec deux chambres et salon, idéal pour groupes.", image:'photo8.jpg', prix:'20 000', prix2h:null, note:'', features:['Climatisé/Ventilé','4-6 personnes','60m²','2 Chambres + Salon'] }
+    {
+      tag:'Studio',
+      titre:'Studio Ventilé',
+      desc:"Espace confortable et aéré, idéal pour un séjour court ou une nuitée relaxante.",
+      image:'sventile.jpeg',
+      prix:'13 000',
+      prix3h:'5 000',
+      note:'',
+      features:['Ventilé','1-2 personnes','20m²','Salle de bain privée']
+    },
+    {
+      tag:'Studio',
+      titre:'Studio Climatisé',
+      desc:"Confort optimal avec climatisation pour des nuits paisibles et reposantes.",
+      image:'sclime.jpeg',
+      prix:'15 000',
+      prix3h:null,
+      note:'🎁 2 nuits : 30 000 FCFA',
+      features:['Climatisé','1-2 personnes','22m²','Salle de bain privée']
+    },
+    {
+      tag:'Chambre-Salon',
+      titre:'Chambre-Salon Ventilée',
+      desc:"Espace généreux avec salon séparé, parfait pour les séjours prolongés.",
+      image:'csalonventile.jpeg',
+      prix:'13 000 à 20 000',
+      prix3h:'5 000',
+      note:'',
+      features:['Ventilé','2-3 personnes','35m²','Salon séparé']
+    },
+    {
+      tag:'Chambre-Salon',
+      titre:'Chambre-Salon Climatisée',
+      desc:"Luxe et confort avec climatisation dans un espace salon-chambre élégant.",
+      image:'csalonclime.jpeg',
+      prix:'13 000 à 20 000',
+      prix3h:'5 000',
+      note:'',
+      features:['Climatisé','2-3 personnes','38m²','Salon séparé']
+    },
+    {
+      tag:'Suite Familiale',
+      titre:'Suite 2 Chambres-Salon',
+      desc:"Espace familial complet avec deux chambres et salon, idéal pour groupes.",
+      image:'2csalon.jpeg',
+      prix:'30 000',
+      prix3h:null,
+      note:'',
+      features:['Climatisé/Ventilé','4-6 personnes','60m²','2 Chambres + Salon']
+    }
   ];
 
   const hGrid = document.getElementById('hebergementsGrid');
   if (hGrid) {
     hGrid.innerHTML = hebergements.map(h => {
-      const waText = encodeURIComponent(`Bonjour Mèfinlo Ghouse 👋\nJe souhaite réserver : *${h.titre}*\n- Nuitée : ${h.prix} FCFA${h.prix2h ? `\n- Option 2h : ${h.prix2h} FCFA` : ''}\n\nPouvez-vous confirmer la disponibilité ?`);
+      const waText = encodeURIComponent(`Bonjour Mèfinlo Ghouse 👋\nJe souhaite réserver : *${h.titre}*\n- Nuitée : ${h.prix} FCFA${h.prix3h ? `\n- Détente 3h : ${h.prix3h} FCFA` : ''}\n\nPouvez-vous confirmer la disponibilité ?`);
       const feats = h.features.map(f => `<div><i>✓</i><span>${f}</span></div>`).join('');
-      const price2h = h.prix2h ? `<span class="price-2h">2h : <strong>${h.prix2h} FCFA</strong></span>` : '';
+      const price3h = h.prix3h ? `<span class="price-3h">3h : <strong>${h.prix3h} FCFA</strong></span>` : '';
       const note = h.note ? `<p class="price-note">${h.note}</p>` : '';
       return `
       <article class="card">
@@ -750,8 +884,8 @@ footer{background:var(--footer-dark);color:#fff}
           <div class="card-features">${feats}</div>
           <div class="price-box">
             <div class="price-row">
-              <div><span class="price">${h.prix}</span><small>FCFA/nuit</small></div>
-              ${price2h}
+              <div><span class="price">${h.prix}</span><small>FCFA/nuitée</small></div>
+              ${price3h}
             </div>
             ${note}
           </div>
@@ -762,9 +896,27 @@ footer{background:var(--footer-dark);color:#fff}
   }
 
   const avis = [
-    { img:'a1.jpg', note:5, titre:'"Un endroit parfait pour se détendre"', texte:"Mèfinlo Ghouse est vraiment un havre de paix. Les chambres sont propres, le personnel est accueillant et l'espace vert est magnifique. J'ai passé une excellente nuitée et je reviendrai certainement.", auteur:'Adjovi Koffi', source:'Google Avis' },
-    { img:'photo1.jpg', note:5, titre:'"Accueil chaleureux et cadre paisible"', texte:"Nous avons été reçus comme des rois. Le jardin est superbe, les chambres impeccables et le rapport qualité-prix imbattable. Je recommande vivement !", auteur:'Serge Dossou', source:'Google Avis' },
-    { img:'photo2.jpg', note:5, titre:'"Séjour inoubliable en famille"', texte:"La suite 2 chambres est spacieuse et bien équipée. Idéal pour un séjour en famille. Le personnel est aux petits soins. Merci Mèfinlo Ghouse !", auteur:'Bernadette Houngbédji', source:'Google Avis' }
+    {
+      img:'M%C3%88FINLO%20GHOUSE%20(11).jpg.jpeg',
+      note:5,
+      titre:'"Un endroit parfait pour se détendre"',
+      texte:"Mèfinlo Ghouse est vraiment un havre de paix. Les chambres sont propres, le personnel est accueillant et le Jardin Verdoyant est magnifique. J'ai passé une excellente nuitée et je reviendrai certainement.",
+      auteur:'Adjovi Koffi', source:'Google Avis'
+    },
+    {
+      img:'M%C3%88FINLO%20GHOUSE%20(17).jpg.jpeg',
+      note:5,
+      titre:'"Accueil chaleureux et cadre paisible"',
+      texte:"Nous avons été reçus comme des rois. Le Jardin Verdoyant est superbe, les chambres impeccables et le rapport qualité-prix imbattable. Je recommande vivement !",
+      auteur:'Serge Dossou', source:'Google Avis'
+    },
+    {
+      img:'M%C3%88FINLO%20GHOUSE%20(24).jpg.jpeg',
+      note:5,
+      titre:'"Séjour inoubliable en famille"',
+      texte:"La suite 2 chambres est spacieuse et bien équipée. Idéal pour un séjour en famille. Le personnel est aux petits soins. Merci Mèfinlo Ghouse !",
+      auteur:'Bernadette Houngbédji', source:'Google Avis'
+    }
   ];
 
   const rWrap = document.getElementById('reviewsWrap');
@@ -876,13 +1028,13 @@ footer{background:var(--footer-dark);color:#fff}
     { keys:['bonjour','salut','bonsoir','hello','coucou','hey','bjr','slt'],
       reply:`Bonjour et bienvenue à Mèfinlo Ghouse 👋\nComment puis-je vous aider ?\n\nVous pouvez me demander :\n• Les tarifs\n• La localisation\n• Les types de chambres\n• Comment réserver` },
     { keys:['tarif','prix','coût','cout','combien','fcfa','cfa'],
-      reply:`Voici nos tarifs 💰\n\n• Studio Ventilé : 5 000 FCFA/nuit (2h : 3 000)\n• Studio Climatisé : 8 000 FCFA/nuit (2 nuits : 15 000)\n• Chambre-Salon Ventilée : 10 000 FCFA/nuit (2h : 5 000)\n• Chambre-Salon Climatisée : 15 000 FCFA/nuit (2h : 5 000)\n• Suite 2 Chambres-Salon : 20 000 FCFA/nuit` },
+      reply:`Voici nos tarifs 💰\n\n• Studio Ventilé : 13 000 FCFA/nuitée (détente 3h : 5 000)\n• Studio Climé : 15 000 FCFA/nuitée (2 nuits : 30 000)\n• Chambre-Salon Ventilée ou Climatisée : 13 000 à 20 000 FCFA (détente 3h : 5 000)\n• 02 Chambres-Salon Ventilées ou Climatisées : à partir de 30 000 FCFA/nuitée\n\n📝 NB : Le prix pour une manifestation diffère selon le type d'occupation, et le courant est à la charge du client pour les séjours.` },
     { keys:['réserv','reserv','book','dispo'],
       reply:`Pour réserver, c'est simple ✨\n\n1️⃣ Choisissez votre hébergement\n2️⃣ Indiquez la date et la durée\n3️⃣ Envoyez-nous un message WhatsApp\n\nRéponse garantie en moins de 30 min !`,
       quick:[{ label:'📱 Réserver sur WhatsApp', url:`${WHATSAPP}?text=${encodeURIComponent('Bonjour Mèfinlo Ghouse, je souhaite réserver.')}` }] },
     { keys:['localis','adresse','où','trouv','situé','situe','map','carte','djègbè','djejbe','bohicon','abomey','sogbo'],
-      reply:`📍 Nous sommes situés :\nCarrefour Sogbo-Aliho, Von\nEn face de la Banque de Sang\nSur le pavé de Djègbè, Bohicon-Abomey, Bénin\n\nOuvert 24h/24 — 7j/7`,
-      quick:[{ label:'🗺️ Voir sur Google Maps', url:'https://www.google.com/maps/search/?api=1&query=6.3654,2.4183' }] },
+      reply:`📍 Nous sommes situés :\n${ADRESSE}\n\nOuvert 24h/24 — 7j/7`,
+      quick:[{ label:'🗺️ Voir sur Google Maps', url:MAPS_LINK }] },
     { keys:['chambre','studio','hébergement','hebergement','suite','salon','type'],
       reply:`Nous proposons 5 types d'hébergements 🏠\n\n• Studio Ventilé (1-2 pers.)\n• Studio Climatisé (1-2 pers.)\n• Chambre-Salon Ventilée (2-3 pers.)\n• Chambre-Salon Climatisée (2-3 pers.)\n• Suite 2 Chambres-Salon (4-6 pers.)` },
     { keys:['horaire','ouvert','heure','ferm'],
@@ -890,12 +1042,12 @@ footer{background:var(--footer-dark);color:#fff}
     { keys:['contact','téléphone','telephone','appel','numéro','numero'],
       reply:`Vous pouvez nous joindre 📞\n• WhatsApp : ${PHONE1}\n• Appel : ${PHONE2}\n\nRéponse en moins de 30 minutes.`,
       quick:[{ label:'📱 Ouvrir WhatsApp', url:WHATSAPP }] },
-    { keys:['2h','2 heure','courte','pause'],
-      reply:`Option 2 heures ⏱️\n\n• Studio Ventilé : 3 000 FCFA\n• Chambre-Salon Ventilée : 5 000 FCFA\n• Chambre-Salon Climatisée : 5 000 FCFA` },
+    { keys:['3h','3 heure','courte','pause','detente','détente'],
+      reply:`Option détente 3 heures ⏱️ (minimum)\n\n• Studio Ventilé : 5 000 FCFA\n• Chambre-Salon Ventilée ou Climatisée : 5 000 FCFA` },
     { keys:['nuit','nuitée','nuitee','dormir'],
-      reply:`Tarifs par nuitée 🌙\n\n• Studio Ventilé : 5 000 FCFA\n• Studio Climatisé : 8 000 FCFA (2 nuits : 15 000)\n• Chambre-Salon Ventilée : 10 000 FCFA\n• Chambre-Salon Climatisée : 15 000 FCFA\n• Suite Familiale : 20 000 FCFA` },
+      reply:`Tarifs par nuitée 🌙\n\n• Studio Ventilé : 13 000 FCFA\n• Studio Climé : 15 000 FCFA (2 nuits : 30 000)\n• Chambre-Salon Ventilée ou Climatisée : 13 000 à 20 000 FCFA\n• 02 Chambres-Salon : à partir de 30 000 FCFA` },
     { keys:['jardin','verdoyant','vert','extérieur'],
-      reply:`Oui ! Nous avons un magnifique jardin verdoyant 🌿\nUn espace de détente unique, calme et fleuri.` },
+      reply:`Oui ! Nous avons un magnifique Jardin Verdoyant 🌿\nUn espace de détente unique, calme et fleuri.` },
     { keys:['sécur','secur','gardien'],
       reply:`Votre sécurité est notre priorité 🛡️\nEnvironnement sécurisé 24h/24.` },
     { keys:['fréd','fred','fredy','développeur','developpeur','site','webmaster'],
