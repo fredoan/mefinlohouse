@@ -10,8 +10,11 @@
 <meta name="geo.placename" content="Bohicon-Abomey">
 <meta name="geo.position" content="6.3654;2.4183">
 <meta name="ICBM" content="6.3654, 2.4183">
+<meta name="format-detection" content="telephone=yes">
 <link rel="canonical" href="https://www.mghabomey.com/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="fr_BJ">
+<meta property="og:site_name" content="Mèfinlo Ghouse">
 <meta property="og:title" content="Mèfinlo Ghouse — Hébergement & Détente à Bohicon-Abomey">
 <meta property="og:description" content="Studios, chambres-salon et suites. Jardin Verdoyant, options 3h ou nuitée.">
 <meta property="og:url" content="https://www.mghabomey.com/">
@@ -25,9 +28,12 @@
   "@type": "LodgingBusiness",
   "name": "Mèfinlo Ghouse",
   "image": "https://www.mghabomey.com/jv1.jpeg",
+  "url": "https://www.mghabomey.com/",
+  "email": "mghabomey@gmail.com",
+  "sameAs": ["https://www.facebook.com/share/1MNXPZjLee/"],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)",
+    "streetAddress": "Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)",
     "addressLocality": "Bohicon-Abomey",
     "addressCountry": "BJ"
   },
@@ -243,12 +249,13 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .res-notice{background:#fffbeb;border-left:4px solid #f59e0b;padding:.75rem 1rem;border-radius:.5rem;font-size:.8rem;color:#78350f;margin-top:1rem;line-height:1.5}
 .res-notice strong{color:#92400e}
 .contact-cards{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2rem}
-@media(min-width:640px){.contact-cards{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:640px){.contact-cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.contact-cards{grid-template-columns:repeat(4,1fr)}}
 .contact-card{display:flex;align-items:center;gap:.75rem;background:#fff;border:1px solid #f3f4f6;border-radius:.75rem;padding:1rem;box-shadow:var(--shadow-md);transition:all .2s}
 .contact-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
 .contact-icon{width:2.5rem;height:2.5rem;border-radius:.75rem;background:#f9fafb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
 .contact-card small{display:block;font-size:.7rem;color:var(--text-gray)}
-.contact-card strong{font-size:.85rem;color:var(--dark)}
+.contact-card strong{font-size:.85rem;color:var(--dark);word-break:break-word}
 .location-info{display:flex;flex-direction:column;gap:1rem}
 .info-card{display:flex;gap:1rem;background:#fff;border:1px solid #f3f4f6;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow-md)}
 .info-card-icon{width:2.75rem;height:2.75rem;border-radius:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.25rem}
@@ -256,7 +263,9 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .info-card-icon.green{background:var(--secondary-10);color:var(--secondary)}
 .info-card-body{flex:1;min-width:0}
 .info-card-body strong{display:block;font-size:.85rem;margin-bottom:.25rem}
-.info-card-body p{font-size:.8rem;color:var(--text-gray);line-height:1.5}
+.info-card-body p{font-size:.8rem;color:var(--text-gray);line-height:1.5;word-break:break-word}
+.info-card-body a{color:var(--secondary);font-weight:600}
+.info-card-body a:hover{text-decoration:underline}
 .info-card-arrow{width:2.25rem;height:2.25rem;background:#f9fafb;border-radius:.75rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
 .info-card-arrow:hover{background:var(--primary);color:#fff}
 .map-frame{width:100%;height:20rem;border:0;border-radius:var(--radius);box-shadow:var(--shadow-xl)}
@@ -289,7 +298,8 @@ footer{background:var(--footer-dark);color:#fff}
 .footer-col ul a:hover{opacity:1}
 .footer-contact li{display:flex;gap:.5rem;font-size:.875rem;opacity:.75;line-height:1.5;margin-bottom:.75rem}
 .footer-contact i{color:var(--primary);margin-top:.15rem;flex-shrink:0;font-style:normal}
-.footer-contact a{opacity:1}
+.footer-contact a{opacity:1;word-break:break-word}
+.footer-contact a:hover{color:var(--primary)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
 @media(min-width:640px){.footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}}
 .footer-bottom p{font-size:.75rem;opacity:.6}
@@ -357,6 +367,10 @@ footer{background:var(--footer-dark);color:#fff}
 @keyframes typingBounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
 .mt-2{margin-top:.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}
 .mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}
 </style>
@@ -365,32 +379,32 @@ footer{background:var(--footer-dark);color:#fff}
 
 <header id="header">
   <div class="container nav">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">🏠</span>
+    <a href="index.html" class="logo" aria-label="Mèfinlo Ghouse - Accueil">
+      <span class="logo-icon" aria-hidden="true">🏠</span>
       <span>Mèfinlo Ghouse</span>
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
-      <a href="index.html" class="active">Accueil</a>
+      <a href="index.html" class="active" aria-current="page">Accueil</a>
       <a href="hebergements.html">Hébergements</a>
       <a href="galerie.html">Galerie</a>
       <a href="reservation.html">Réservation</a>
       <a href="contact.html">Contact</a>
     </nav>
     <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="btn-reserve" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       <span>Réserver</span>
     </a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">☰</button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <nav>
+    <nav aria-label="Navigation mobile">
       <a href="index.html" class="active">Accueil</a>
       <a href="hebergements.html">Hébergements</a>
       <a href="galerie.html">Galerie</a>
       <a href="reservation.html">Réservation</a>
       <a href="contact.html">Contact</a>
       <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse" class="wa-mobile" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Réserver via WhatsApp</span>
       </a>
     </nav>
@@ -406,17 +420,17 @@ footer{background:var(--footer-dark);color:#fff}
   </video>
   <div class="hero-content">
     <div class="hero-location">
-      <span>📍</span><span>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</span>
+      <span aria-hidden="true">📍</span><span>Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)</span>
     </div>
     <h1>Mèfinlo Ghouse<span>Hébergement & Détente</span></h1>
     <p>Studios, Chambre-Salon et 2 Chambres-Salon — Réservez <strong>3h ou une nuitée</strong>. Calme, Jardin Verdoyant, proche Carrefour Sogbo Aliho.</p>
     <div class="hero-buttons">
       <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="btn btn-primary" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Réserver via WhatsApp</span>
       </a>
       <a href="#hebergements" class="btn btn-outline">
-        <span>👁️</span><span>Voir les chambres</span>
+        <span aria-hidden="true">👁️</span><span>Voir les chambres</span>
       </a>
     </div>
     <div class="hero-badges">
@@ -458,7 +472,7 @@ footer{background:var(--footer-dark);color:#fff}
   </div>
   <div class="gallery-cta">
     <a href="galerie.html" class="btn btn-pink">
-      <span>📸</span><span>Voir toute la galerie</span>
+      <span aria-hidden="true">📸</span><span>Voir toute la galerie</span>
     </a>
   </div>
 </section>
@@ -488,7 +502,7 @@ footer{background:var(--footer-dark);color:#fff}
       <div class="story-img reveal">
         <img src="jv1.jpeg" alt="Jardin Verdoyant de Mèfinlo Ghouse" loading="lazy">
         <div class="story-badge">
-          <i>🌿</i>
+          <i aria-hidden="true">🌿</i>
           <div><strong>Jardin Verdoyant</strong><small>Espace de détente unique</small></div>
         </div>
       </div>
@@ -498,13 +512,13 @@ footer{background:var(--footer-dark);color:#fff}
         <p><strong>Mèfinlo Ghouse</strong> est né de la volonté de créer un espace d'hébergement unique à <strong>Djègbé</strong>, alliant confort moderne et authenticité béninoise. Situé au cœur de Bohicon, notre établissement offre un <strong>Jardin Verdoyant</strong> où règne la tranquillité, loin de l'agitation urbaine.</p>
         <p>Que ce soit pour une courte pause de <strong>3h</strong> ou un séjour prolongé, nous nous engageons à offrir à chaque client une expérience mémorable, chaleureuse et sécurisée.</p>
         <div class="story-features">
-          <div class="story-feature"><div class="story-feature-icon">📍</div><div><strong>Emplacement idéal</strong><small>Carrefour Sogbo Aliho, Von</small></div></div>
-          <div class="story-feature"><div class="story-feature-icon">🕒</div><div><strong>Flexibilité totale</strong><small>Options 3h ou nuitée</small></div></div>
-          <div class="story-feature"><div class="story-feature-icon">🛡️</div><div><strong>Sécurité 24h/24</strong><small>Environnement sécurisé</small></div></div>
-          <div class="story-feature"><div class="story-feature-icon">🌿</div><div><strong>Jardin Verdoyant</strong><small>Espace paisible et fleuri</small></div></div>
+          <div class="story-feature"><div class="story-feature-icon" aria-hidden="true">📍</div><div><strong>Emplacement idéal</strong><small>Carrefour Sogbo Aliho, Von</small></div></div>
+          <div class="story-feature"><div class="story-feature-icon" aria-hidden="true">🕒</div><div><strong>Flexibilité totale</strong><small>Options 3h ou nuitée</small></div></div>
+          <div class="story-feature"><div class="story-feature-icon" aria-hidden="true">🛡️</div><div><strong>Sécurité 24h/24</strong><small>Environnement sécurisé</small></div></div>
+          <div class="story-feature"><div class="story-feature-icon" aria-hidden="true">🌿</div><div><strong>Jardin Verdoyant</strong><small>Espace paisible et fleuri</small></div></div>
         </div>
         <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20voudrais%20en%20savoir%20plus." class="btn btn-pink" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <span>Nous contacter</span>
         </a>
       </div>
@@ -528,36 +542,40 @@ footer{background:var(--footer-dark);color:#fff}
       <div class="res-step">
         <p class="res-step-title"><span class="res-step-num">2</span>Type de ventilation</p>
         <div class="res-toggle" id="resVentilation">
-          <button data-value="Ventilé" class="selected">💨 Ventilé</button>
-          <button data-value="Climatisé">❄️ Climatisé</button>
+          <button type="button" data-value="Ventilé" class="selected">💨 Ventilé</button>
+          <button type="button" data-value="Climatisé">❄️ Climatisé</button>
         </div>
       </div>
       <div class="res-step">
         <p class="res-step-title"><span class="res-step-num">3</span>Durée du séjour</p>
         <div class="res-toggle" id="resDuree">
-          <button data-value="Nuitée" class="selected">🌙 Nuitée</button>
-          <button data-value="3 heures">🕒 3 heures</button>
+          <button type="button" data-value="Nuitée" class="selected">🌙 Nuitée</button>
+          <button type="button" data-value="3 heures">🕒 3 heures</button>
         </div>
       </div>
       <button class="res-submit" id="resSubmit">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Envoyer ma demande sur WhatsApp</span>
       </button>
       <p class="res-note">🔒 Réponse garantie en moins de 30 minutes · Aucun paiement en ligne requis</p>
     </div>
     <div class="contact-cards">
       <a href="https://wa.me/22901678216" target="_blank" rel="noopener" class="contact-card">
-        <div class="contact-icon" style="color:var(--wa-green)">
+        <div class="contact-icon" style="color:var(--wa-green)" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </div>
         <div><small>WhatsApp</small><strong>01 67 82 16 16</strong></div>
       </a>
       <a href="tel:+22901447979" class="contact-card">
-        <div class="contact-icon" style="color:var(--primary)">📞</div>
+        <div class="contact-icon" style="color:var(--primary)" aria-hidden="true">📞</div>
         <div><small>Appel direct</small><strong>01 44 79 79 01</strong></div>
       </a>
+      <a href="mailto:mghabomey@gmail.com" class="contact-card">
+        <div class="contact-icon" style="color:var(--primary)" aria-hidden="true">✉️</div>
+        <div><small>Email</small><strong>mghabomey@gmail.com</strong></div>
+      </a>
       <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="contact-card">
-        <div class="contact-icon">📍</div>
+        <div class="contact-icon" aria-hidden="true">📍</div>
         <div><small>Adresse</small><strong>Sogbo Aliho, Von · Djègbé</strong></div>
       </a>
     </div>
@@ -570,20 +588,20 @@ footer{background:var(--footer-dark);color:#fff}
     <div class="section-title reveal">
       <span class="badge-pill green">Localisation</span>
       <h2>Trouvez-nous facilement</h2>
-      <p>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</p>
+      <p>Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)</p>
     </div>
     <div class="grid grid-2" style="align-items:start;gap:2rem">
       <div class="location-info reveal">
         <div class="info-card">
-          <div class="info-card-icon pink">📍</div>
+          <div class="info-card-icon pink" aria-hidden="true">📍</div>
           <div class="info-card-body">
             <strong>Adresse</strong>
-            <p>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</p>
+            <p>Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)</p>
           </div>
           <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="info-card-arrow" aria-label="Ouvrir dans Google Maps">↗</a>
         </div>
         <div class="info-card">
-          <div class="info-card-icon green">📞</div>
+          <div class="info-card-icon green" aria-hidden="true">📞</div>
           <div class="info-card-body">
             <strong>Téléphone</strong>
             <p>01 67 82 16 16<br>01 44 79 79 01</p>
@@ -591,7 +609,15 @@ footer{background:var(--footer-dark);color:#fff}
           <a href="tel:+22901678216" class="info-card-arrow" aria-label="Appeler">↗</a>
         </div>
         <div class="info-card">
-          <div class="info-card-icon green">📱</div>
+          <div class="info-card-icon pink" aria-hidden="true">✉️</div>
+          <div class="info-card-body">
+            <strong>Email</strong>
+            <p><a href="mailto:mghabomey@gmail.com">mghabomey@gmail.com</a></p>
+          </div>
+          <a href="mailto:mghabomey@gmail.com" class="info-card-arrow" aria-label="Envoyer un email">↗</a>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon green" aria-hidden="true">📱</div>
           <div class="info-card-body">
             <strong>WhatsApp</strong>
             <p>Réservation & renseignements<br>Réponse en moins de 30 min</p>
@@ -599,7 +625,7 @@ footer{background:var(--footer-dark);color:#fff}
           <a href="https://wa.me/22901678216" target="_blank" rel="noopener" class="info-card-arrow" aria-label="WhatsApp">↗</a>
         </div>
         <div class="info-card">
-          <div class="info-card-icon pink">🕒</div>
+          <div class="info-card-icon pink" aria-hidden="true">🕒</div>
           <div class="info-card-body">
             <strong>Horaires</strong>
             <p>Ouvert 24h/24 — 7j/7<br>Accueil permanent</p>
@@ -608,7 +634,6 @@ footer{background:var(--footer-dark);color:#fff}
         <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="btn btn-primary btn-block">🧭 Obtenir l'itinéraire Google Maps</a>
       </div>
       <div class="reveal">
-        <!-- ✅ IFRAME CORRIGÉE : pointe sur l'adresse exacte -->
         <iframe class="map-frame" src="https://www.google.com/maps?q=Carrefour+Sogbo+Aliho+Von+Dj%C3%A8gb%C3%A9+Bohicon+Abomey+Benin&z=15&output=embed" loading="lazy" title="Localisation Mèfinlo Ghouse sur Google Maps" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
@@ -625,7 +650,7 @@ footer{background:var(--footer-dark);color:#fff}
         <p>Contactez-nous directement sur WhatsApp — réponse en moins de 30 min</p>
       </div>
       <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20r%C3%A9server." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         <span>Réserver maintenant</span>
       </a>
     </div>
@@ -634,10 +659,10 @@ footer{background:var(--footer-dark);color:#fff}
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <div class="footer-brand"><span class="footer-brand-icon">🏠</span><span>Mèfinlo Ghouse</span></div>
+          <div class="footer-brand"><span class="footer-brand-icon" aria-hidden="true">🏠</span><span>Mèfinlo Ghouse</span></div>
           <p class="footer-desc">Votre havre de paix à Bohicon. Studios, chambres-salon et suites familiales au cœur de Djègbè.</p>
-          <form class="newsletter" id="newsletter">
-            <input type="email" placeholder="Votre email" required name="email" aria-label="Votre email">
+          <form class="newsletter" id="newsletter" aria-label="Inscription newsletter">
+            <input type="email" placeholder="Votre email" required name="email" aria-label="Votre email" autocomplete="email">
             <button type="submit" aria-label="S'inscrire">✈️</button>
           </form>
         </div>
@@ -663,28 +688,30 @@ footer{background:var(--footer-dark);color:#fff}
         <div class="footer-col">
           <h4>Contact</h4>
           <ul class="footer-contact">
-            <li>📍<span>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</span></li>
-            <li>📞<a href="tel:+22901678216">01 67 82 16 16</a></li>
-            <li>📞<a href="tel:+22901447979">01 44 79 79 01</a></li>
-            <li>🕒<span>Ouvert 24h/24 — 7j/7</span></li>
+            <li><i aria-hidden="true">📍</i><span>Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)</span></li>
+            <li><i aria-hidden="true">📞</i><a href="tel:+22901678216">01 67 82 16 16</a></li>
+            <li><i aria-hidden="true">📞</i><a href="tel:+22901447979">01 44 79 79 01</a></li>
+            <li><i aria-hidden="true">✉️</i><a href="mailto:mghabomey@gmail.com">mghabomey@gmail.com</a></li>
+            <li><i aria-hidden="true">🕒</i><span>Ouvert 24h/24 — 7j/7</span></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon).</p>
+        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon).</p>
         <div class="footer-social">
-          <a href="https://facebook.com/" target="_blank" rel="nofollow noopener" aria-label="Facebook">📘</a>
-          <a href="https://instagram.com/" target="_blank" rel="nofollow noopener" aria-label="Instagram">📷</a>
-          <a href="https://wa.me/22901678216" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://www.facebook.com/share/1MNXPZjLee/" target="_blank" rel="noopener" aria-label="Page Facebook de Mèfinlo Ghouse">📘</a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram de Mèfinlo Ghouse">📷</a>
+          <a href="https://wa.me/22901678216" target="_blank" rel="noopener" aria-label="WhatsApp de Mèfinlo Ghouse">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="nofollow noopener" aria-label="Google Maps">🗺️</a>
+          <a href="mailto:mghabomey@gmail.com" aria-label="Envoyer un email à Mèfinlo Ghouse">✉️</a>
+          <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" aria-label="Localisation Google Maps">🗺️</a>
         </div>
       </div>
       <div class="footer-credit">
         <span>Conçu & développé par <strong>Frédy Amoussou</strong></span>
         <a href="https://wa.me/2290152552106?text=Bonjour%20Fr%C3%A9dy%2C%20je%20vous%20contacte%20au%20sujet%20du%20site%20M%C3%A8finlo%20Ghouse." target="_blank" rel="noopener" aria-label="Contacter Frédy Amoussou sur WhatsApp">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           <span>+229 01 52 55 21 06</span>
         </a>
       </div>
@@ -693,19 +720,19 @@ footer{background:var(--footer-dark);color:#fff}
 </footer>
 
 <a href="https://wa.me/22901678216?text=Bonjour%20M%C3%A8finlo%20Ghouse%2C%20je%20souhaite%20faire%20une%20r%C3%A9servation." class="wa-float" target="_blank" rel="noopener" aria-label="Contacter via WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="wa-float-label">Besoin d'aide ? Discutons !</span>
 </a>
 
-<button class="chat-toggle" id="chatToggle" aria-label="Ouvrir le chatbot" aria-expanded="false">
-  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+<button class="chat-toggle" id="chatToggle" aria-label="Ouvrir le chatbot" aria-expanded="false" aria-controls="chatWindow">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
   <span class="chat-badge"></span>
 </button>
 
-<div class="chat-window" id="chatWindow" role="dialog" aria-label="Chatbot Mèfinlo Ghouse">
+<div class="chat-window" id="chatWindow" role="dialog" aria-modal="false" aria-label="Chatbot Mèfinlo Ghouse">
   <div class="chat-header">
     <div class="chat-header-avatar">
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
     </div>
     <div class="chat-header-info">
       <strong>Assistant Mèfinlo</strong>
@@ -718,7 +745,7 @@ footer{background:var(--footer-dark);color:#fff}
   <form class="chat-footer" id="chatForm">
     <input type="text" id="chatInput" placeholder="Écrivez votre message..." autocomplete="off" aria-label="Message">
     <button type="submit" class="chat-send" aria-label="Envoyer">
-      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
     </button>
   </form>
 </div>
@@ -731,10 +758,12 @@ footer{background:var(--footer-dark);color:#fff}
   const WHATSAPP = WA_MAIN;
   const PHONE1 = '+22901678216';
   const PHONE2 = '+22901447979';
+  const EMAIL = 'mghabomey@gmail.com';
+  const FACEBOOK = 'https://www.facebook.com/share/1MNXPZjLee/';
   const WA_FREDY = 'https://wa.me/2290152552106';
   const MAPS_LINK = 'https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb';
-  const ADRESSE = "Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)";
-  const WA_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+  const ADRESSE = "Carrefour Sogbo Aliho, Von en face de la banque sur le pavé de Djègbé (à Abomey et Bohicon)";
+  const WA_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -769,10 +798,9 @@ footer{background:var(--footer-dark);color:#fff}
     });
   }
 
-  // ============ GALERIE ANIMÉE : toutes les photos MÈFINLO ============
+  // ============ GALERIE ANIMÉE ============
   const photosMefinlo = [
     'M%C3%88FINLO%20GHOUSE%20(3).jpg.jpeg',
-    
     'M%C3%88FINLO%20GHOUSE%20(6).jpg.jpeg',
     'M%C3%88FINLO%20GHOUSE%20(7).jpg.jpeg',
     'M%C3%88FINLO%20GHOUSE%20(8).jpg.jpeg',
@@ -792,7 +820,6 @@ footer{background:var(--footer-dark);color:#fff}
     'M%C3%88FINLO%20GHOUSE%20(23).jpg.jpeg',
     'M%C3%88FINLO%20GHOUSE%20(24).jpg.jpeg',
     'M%C3%88FINLO%20GHOUSE%20(25).jpg.jpeg',
-
     'M%C3%88FINLO%20GHOUSE%20(28).jpg.jpeg',
     'M%C3%88FINLO%20GHOUSE%20(30).jpg.jpeg',
     'M%C3%88FINLO%20GHOUSE%20(31).jpg.jpeg',
@@ -821,7 +848,7 @@ footer{background:var(--footer-dark);color:#fff}
   if (hGrid) {
     hGrid.innerHTML = hebergements.map(h => {
       const waText = encodeURIComponent(`Bonjour Mèfinlo Ghouse 👋\nJe souhaite réserver : *${h.titre}*\n- Nuitée : ${h.prix} FCFA${h.prix3h ? `\n- Détente 3h : ${h.prix3h} FCFA` : ''}\n\nPouvez-vous confirmer la disponibilité ?`);
-      const feats = h.features.map(f => `<div><i>✓</i><span>${f}</span></div>`).join('');
+      const feats = h.features.map(f => `<div><i aria-hidden="true">✓</i><span>${f}</span></div>`).join('');
       const price3h = h.prix3h ? `<span class="price-3h">3h : <strong>${h.prix3h} FCFA</strong></span>` : '';
       const note = h.note ? `<p class="price-note">${h.note}</p>` : '';
       return `
@@ -974,9 +1001,12 @@ footer{background:var(--footer-dark);color:#fff}
       reply:`Nous proposons 5 types d'hébergements 🏠\n\n• Studio Ventilé (1-2 pers.)\n• Studio Climé (1-2 pers.)\n• Chambre-Salon Ventilée (2-3 pers.)\n• Chambre-Salon Climatisée (2-3 pers.)\n• Suite 02 Chambres-Salon (4-6 pers.)` },
     { keys:['horaire','ouvert','heure','ferm'],
       reply:`Nous sommes ouverts 24h/24 et 7j/7 🕒\nAccueil permanent.` },
-    { keys:['contact','téléphone','telephone','appel','numéro','numero'],
-      reply:`Vous pouvez nous joindre 📞\n• WhatsApp : ${PHONE1}\n• Appel : ${PHONE2}\n\nRéponse en moins de 30 minutes.`,
-      quick:[{ label:'📱 Ouvrir WhatsApp', url:WHATSAPP }] },
+    { keys:['contact','téléphone','telephone','appel','numéro','numero','email','mail'],
+      reply:`Vous pouvez nous joindre 📞\n• WhatsApp : ${PHONE1}\n• Appel : ${PHONE2}\n• Email : ${EMAIL}\n\nRéponse en moins de 30 minutes.`,
+      quick:[{ label:'📱 Ouvrir WhatsApp', url:WHATSAPP },{ label:'✉️ Envoyer un email', url:`mailto:${EMAIL}` }] },
+    { keys:['facebook','fb','page'],
+      reply:`Retrouvez-nous sur notre page Facebook officielle 📘`,
+      quick:[{ label:'📘 Page Facebook', url:FACEBOOK }] },
     { keys:['3h','3 heure','courte','pause','detente','détente'],
       reply:`Option détente 3 heures ⏱️ (minimum)\n\n• Studio Ventilé : 5 000 FCFA\n• Chambre-Salon Ventilée ou Climatisée : 5 000 FCFA` },
     { keys:['nuit','nuitée','nuitee','dormir'],
@@ -1007,7 +1037,7 @@ footer{background:var(--footer-dark);color:#fff}
     const div = document.createElement('div');
     div.className = `chat-msg ${from}`;
     const avatar = from === 'bot' ? '🤖' : '👤';
-    div.innerHTML = `<div class="chat-msg-avatar">${avatar}</div><div class="chat-msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
+    div.innerHTML = `<div class="chat-msg-avatar" aria-hidden="true">${avatar}</div><div class="chat-msg-bubble">${text.replace(/\n/g, '<br>')}</div>`;
     chatBody.appendChild(div);
     if (quick.length) {
       const q = document.createElement('div');
@@ -1031,7 +1061,7 @@ footer{background:var(--footer-dark);color:#fff}
     const t = document.createElement('div');
     t.className = 'chat-msg bot';
     t.id = 'typingIndicator';
-    t.innerHTML = `<div class="chat-msg-avatar">🤖</div><div class="chat-typing"><span></span><span></span><span></span></div>`;
+    t.innerHTML = `<div class="chat-msg-avatar" aria-hidden="true">🤖</div><div class="chat-typing"><span></span><span></span><span></span></div>`;
     chatBody.appendChild(t);
     chatBody.scrollTop = chatBody.scrollHeight;
   };
@@ -1050,7 +1080,7 @@ footer{background:var(--footer-dark);color:#fff}
       hideTyping();
       const found = findReply(text);
       if (found) addMsg(found.reply, 'bot', found.quick || []);
-      else addMsg(`Je n'ai pas bien compris 🤔\n\nJe peux vous aider sur :\n• Les tarifs\n• La localisation\n• Les chambres\n• La réservation\n\nOu contactez-nous directement :`, 'bot',
+      else addMsg(`Je n'ai pas bien compris 🤔\n\nJe peux vous aider sur :\n• Les tarifs\n• La localisation\n• Les chambres\n• La réservation\n• L'email et le Facebook\n\nOu contactez-nous directement :`, 'bot',
         [{ label:'📱 WhatsApp', url:`${WHATSAPP}?text=${encodeURIComponent('Bonjour Mèfinlo Ghouse, j\'ai une question.')}` }]);
     }, 700 + Math.random() * 400);
   };
@@ -1088,6 +1118,10 @@ footer{background:var(--footer-dark);color:#fff}
   });
   chatClose.addEventListener('click', closeChat);
 
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && chatWindow.classList.contains('open')) closeChat();
+  });
+
   chatForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const val = chatInput.value.trim();
@@ -1100,7 +1134,7 @@ footer{background:var(--footer-dark);color:#fff}
     if (!chatWindow.classList.contains('open')) chatToggle.classList.add('has-msg');
   }, 8000);
 
-  window.MG = { handleUser, addMsg };
+  window.MG = { handleUser, addMsg, EMAIL, FACEBOOK };
 
 })();
 </script>
