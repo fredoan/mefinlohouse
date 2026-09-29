@@ -444,7 +444,7 @@ footer{background:var(--footer-dark);color:#fff}
   </div>
 </section>
 
-<!-- ================= GALERIE ANIMÉE (défilement) ================= -->
+<!-- ================= GALERIE ANIMÉE ================= -->
 <section class="section" style="background:var(--bg-warm);padding-bottom:2rem">
   <div class="container">
     <div class="section-title reveal">
@@ -558,7 +558,7 @@ footer{background:var(--footer-dark);color:#fff}
       </a>
       <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="contact-card">
         <div class="contact-icon">📍</div>
-        <div><small>Adresse</small><strong>Carrefour Sogbo Aliho, Von</strong></div>
+        <div><small>Adresse</small><strong>Sogbo Aliho, Von · Djègbé</strong></div>
       </a>
     </div>
   </div>
@@ -608,7 +608,8 @@ footer{background:var(--footer-dark);color:#fff}
         <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="noopener" class="btn btn-primary btn-block">🧭 Obtenir l'itinéraire Google Maps</a>
       </div>
       <div class="reveal">
-        <iframe class="map-frame" src="https://www.google.com/maps?q=6.3654,2.4183&z=15&output=embed" loading="lazy" title="Localisation Mèfinlo Ghouse sur Google Maps" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <!-- ✅ IFRAME CORRIGÉE : pointe sur l'adresse exacte -->
+        <iframe class="map-frame" src="https://www.google.com/maps?q=Carrefour+Sogbo+Aliho+Von+Dj%C3%A8gb%C3%A9+Bohicon+Abomey+Benin&z=15&output=embed" loading="lazy" title="Localisation Mèfinlo Ghouse sur Google Maps" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -803,65 +804,18 @@ footer{background:var(--footer-dark);color:#fff}
   ];
   const galleryTrack = document.getElementById('galleryTrack');
   if (galleryTrack) {
-    // On duplique pour un défilement infini sans "saut"
     const imgsHTML = photosMefinlo.map((src, i) =>
       `<img src="${src}" alt="Photo Mèfinlo Ghouse ${i+1}" loading="lazy">`
     ).join('');
-    galleryTrack.innerHTML = imgsHTML + imgsHTML; // duplication
+    galleryTrack.innerHTML = imgsHTML + imgsHTML;
   }
-  // ============ FIN GALERIE ============
 
   const hebergements = [
-    {
-      tag:'Studio',
-      titre:'Studio Ventilé',
-      desc:"Espace confortable et aéré, idéal pour un séjour court ou une nuitée relaxante.",
-      image:'sventile.jpeg',
-      prix:'13 000',
-      prix3h:'5 000',
-      note:'',
-      features:['Ventilé','1-2 personnes','20m²','Salle de bain privée']
-    },
-    {
-      tag:'Studio',
-      titre:'Studio Climatisé',
-      desc:"Confort optimal avec climatisation pour des nuits paisibles et reposantes.",
-      image:'sclime.jpeg',
-      prix:'15 000',
-      prix3h:null,
-      note:'🎁 2 nuits : 30 000 FCFA',
-      features:['Climatisé','1-2 personnes','22m²','Salle de bain privée']
-    },
-    {
-      tag:'Chambre-Salon',
-      titre:'Chambre-Salon Ventilée',
-      desc:"Espace généreux avec salon séparé, parfait pour les séjours prolongés.",
-      image:'csalonventile.jpeg',
-      prix:'13 000 à 20 000',
-      prix3h:'5 000',
-      note:'',
-      features:['Ventilé','2-3 personnes','35m²','Salon séparé']
-    },
-    {
-      tag:'Chambre-Salon',
-      titre:'Chambre-Salon Climatisée',
-      desc:"Luxe et confort avec climatisation dans un espace salon-chambre élégant.",
-      image:'csalonclime.jpeg',
-      prix:'13 000 à 20 000',
-      prix3h:'5 000',
-      note:'',
-      features:['Climatisé','2-3 personnes','38m²','Salon séparé']
-    },
-    {
-      tag:'Suite Familiale',
-      titre:'Suite 2 Chambres-Salon',
-      desc:"Espace familial complet avec deux chambres et salon, idéal pour groupes.",
-      image:'2csalon.jpeg',
-      prix:'30 000',
-      prix3h:null,
-      note:'',
-      features:['Climatisé/Ventilé','4-6 personnes','60m²','2 Chambres + Salon']
-    }
+    { tag:'Studio', titre:'Studio Ventilé', desc:"Espace confortable et aéré, idéal pour un séjour court ou une nuitée relaxante.", image:'sventile.jpeg', prix:'13 000', prix3h:'5 000', note:'', features:['Ventilé','1-2 personnes','20m²','Salle de bain privée'] },
+    { tag:'Studio', titre:'Studio Climé', desc:"Confort optimal avec climatisation pour des nuits paisibles et reposantes.", image:'sclime.jpeg', prix:'15 000', prix3h:null, note:'🎁 2 nuits : 30 000 FCFA', features:['Climatisé','1-2 personnes','22m²','Salle de bain privée'] },
+    { tag:'Chambre-Salon', titre:'Chambre-Salon Ventilée', desc:"Espace généreux avec salon séparé, parfait pour les séjours prolongés.", image:'csalonventile.jpeg', prix:'13 000 à 20 000', prix3h:'5 000', note:'', features:['Ventilé','2-3 personnes','35m²','Salon séparé'] },
+    { tag:'Chambre-Salon', titre:'Chambre-Salon Climatisée', desc:"Luxe et confort avec climatisation dans un espace salon-chambre élégant.", image:'csalonclime.jpeg', prix:'13 000 à 20 000', prix3h:'5 000', note:'', features:['Climatisé','2-3 personnes','38m²','Salon séparé'] },
+    { tag:'Suite Familiale', titre:'Suite 02 Chambres-Salon', desc:"Espace familial complet avec deux chambres et salon, idéal pour groupes.", image:'2csalon.jpeg', prix:'30 000', prix3h:null, note:'Ventilée ou Climatisée', features:['Climatisé/Ventilé','4-6 personnes','60m²','2 Chambres + Salon'] }
   ];
 
   const hGrid = document.getElementById('hebergementsGrid');
@@ -896,27 +850,9 @@ footer{background:var(--footer-dark);color:#fff}
   }
 
   const avis = [
-    {
-      img:'M%C3%88FINLO%20GHOUSE%20(11).jpg.jpeg',
-      note:5,
-      titre:'"Un endroit parfait pour se détendre"',
-      texte:"Mèfinlo Ghouse est vraiment un havre de paix. Les chambres sont propres, le personnel est accueillant et le Jardin Verdoyant est magnifique. J'ai passé une excellente nuitée et je reviendrai certainement.",
-      auteur:'Adjovi Koffi', source:'Google Avis'
-    },
-    {
-      img:'M%C3%88FINLO%20GHOUSE%20(17).jpg.jpeg',
-      note:5,
-      titre:'"Accueil chaleureux et cadre paisible"',
-      texte:"Nous avons été reçus comme des rois. Le Jardin Verdoyant est superbe, les chambres impeccables et le rapport qualité-prix imbattable. Je recommande vivement !",
-      auteur:'Serge Dossou', source:'Google Avis'
-    },
-    {
-      img:'M%C3%88FINLO%20GHOUSE%20(24).jpg.jpeg',
-      note:5,
-      titre:'"Séjour inoubliable en famille"',
-      texte:"La suite 2 chambres est spacieuse et bien équipée. Idéal pour un séjour en famille. Le personnel est aux petits soins. Merci Mèfinlo Ghouse !",
-      auteur:'Bernadette Houngbédji', source:'Google Avis'
-    }
+    { img:'M%C3%88FINLO%20GHOUSE%20(11).jpg.jpeg', note:5, titre:'"Un endroit parfait pour se détendre"', texte:"Mèfinlo Ghouse est vraiment un havre de paix. Les chambres sont propres, le personnel est accueillant et le Jardin Verdoyant est magnifique. J'ai passé une excellente nuitée et je reviendrai certainement.", auteur:'Adjovi Koffi', source:'Google Avis' },
+    { img:'M%C3%88FINLO%20GHOUSE%20(17).jpg.jpeg', note:5, titre:'"Accueil chaleureux et cadre paisible"', texte:"Nous avons été reçus comme des rois. Le Jardin Verdoyant est superbe, les chambres impeccables et le rapport qualité-prix imbattable. Je recommande vivement !", auteur:'Serge Dossou', source:'Google Avis' },
+    { img:'M%C3%88FINLO%20GHOUSE%20(24).jpg.jpeg', note:5, titre:'"Séjour inoubliable en famille"', texte:"La suite 2 chambres est spacieuse et bien équipée. Idéal pour un séjour en famille. Le personnel est aux petits soins. Merci Mèfinlo Ghouse !", auteur:'Bernadette Houngbédji', source:'Google Avis' }
   ];
 
   const rWrap = document.getElementById('reviewsWrap');
@@ -1036,7 +972,7 @@ footer{background:var(--footer-dark);color:#fff}
       reply:`📍 Nous sommes situés :\n${ADRESSE}\n\nOuvert 24h/24 — 7j/7`,
       quick:[{ label:'🗺️ Voir sur Google Maps', url:MAPS_LINK }] },
     { keys:['chambre','studio','hébergement','hebergement','suite','salon','type'],
-      reply:`Nous proposons 5 types d'hébergements 🏠\n\n• Studio Ventilé (1-2 pers.)\n• Studio Climatisé (1-2 pers.)\n• Chambre-Salon Ventilée (2-3 pers.)\n• Chambre-Salon Climatisée (2-3 pers.)\n• Suite 2 Chambres-Salon (4-6 pers.)` },
+      reply:`Nous proposons 5 types d'hébergements 🏠\n\n• Studio Ventilé (1-2 pers.)\n• Studio Climé (1-2 pers.)\n• Chambre-Salon Ventilée (2-3 pers.)\n• Chambre-Salon Climatisée (2-3 pers.)\n• Suite 02 Chambres-Salon (4-6 pers.)` },
     { keys:['horaire','ouvert','heure','ferm'],
       reply:`Nous sommes ouverts 24h/24 et 7j/7 🕒\nAccueil permanent.` },
     { keys:['contact','téléphone','telephone','appel','numéro','numero'],
@@ -1050,6 +986,8 @@ footer{background:var(--footer-dark);color:#fff}
       reply:`Oui ! Nous avons un magnifique Jardin Verdoyant 🌿\nUn espace de détente unique, calme et fleuri.` },
     { keys:['sécur','secur','gardien'],
       reply:`Votre sécurité est notre priorité 🛡️\nEnvironnement sécurisé 24h/24.` },
+    { keys:['manifestation','courant','électricité','electricite'],
+      reply:`📝 NB : Le Prix des chambres pour une manifestation diffère selon le type d'occupation et le courant est à la charge du client pour les séjours.` },
     { keys:['fréd','fred','fredy','développeur','developpeur','site','webmaster'],
       reply:`Ce site a été conçu par Frédy Amoussou 🌐\nPour toute demande technique :`,
       quick:[{ label:'💻 Contacter Frédy', url:`${WA_FREDY}?text=${encodeURIComponent('Bonjour Frédy, je vous contacte au sujet du site Mèfinlo Ghouse.')}` }] },
