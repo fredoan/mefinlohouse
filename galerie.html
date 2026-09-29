@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Galerie Photos & Vidéos — Mèfinlo Ghouse Bohicon-Abomey</title>
-<meta name="description" content="Découvrez en images notre établissement, nos chambres, notre jardin verdoyant et notre vidéo de présentation à Bohicon-Abomey, Bénin.">
-<meta name="keywords" content="galerie photos Mèfinlo Ghouse, vidéo hébergement Bohicon, photos chambres Djègbè, jardin verdoyant Bénin">
+<meta name="description" content="Découvrez en images notre établissement, nos chambres, notre Jardin Verdoyant et notre vidéo de présentation à Bohicon-Abomey, Bénin.">
+<meta name="keywords" content="galerie photos Mèfinlo Ghouse, vidéo hébergement Bohicon, photos chambres Djègbè, Jardin Verdoyant Bénin">
 <meta name="geo.region" content="BJ-LI">
 <meta name="geo.placename" content="Bohicon-Abomey">
 <meta name="geo.position" content="6.3654;2.4183">
@@ -13,9 +13,9 @@
 <link rel="canonical" href="https://www.mghabomey.com/galerie.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Galerie Photos & Vidéos — Mèfinlo Ghouse">
-<meta property="og:description" content="Découvrez notre établissement, nos chambres et notre jardin verdoyant en images.">
+<meta property="og:description" content="Découvrez notre établissement, nos chambres et notre Jardin Verdoyant en images.">
 <meta property="og:url" content="https://www.mghabomey.com/galerie.html">
-<meta property="og:image" content="https://www.mghabomey.com/photo1.jpg">
+<meta property="og:image" content="https://www.mghabomey.com/jv1.jpeg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1a3d2e">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23ff6b81'/%3E%3Ctext x='50' y='65' font-size='55' text-anchor='middle' fill='white'%3E%F0%9F%8F%A0%3C/text%3E%3C/svg%3E">
@@ -26,14 +26,13 @@
   "name": "Galerie Mèfinlo Ghouse",
   "url": "https://www.mghabomey.com/galerie.html",
   "image": [
-    "https://www.mghabomey.com/photo1.jpg",
-    "https://www.mghabomey.com/photo2.jpg",
-    "https://www.mghabomey.com/photo4.jpg",
-    "https://www.mghabomey.com/photo5.jpg",
-    "https://www.mghabomey.com/photo6.jpg",
-    "https://www.mghabomey.com/photo7.jpg",
-    "https://www.mghabomey.com/photo8.jpg",
-    "https://www.mghabomey.com/photo10.jpg"
+    "https://www.mghabomey.com/jv1.jpeg",
+    "https://www.mghabomey.com/jv2.jpeg",
+    "https://www.mghabomey.com/sventile.jpeg",
+    "https://www.mghabomey.com/sclime.jpeg",
+    "https://www.mghabomey.com/csalonventile.jpeg",
+    "https://www.mghabomey.com/csalonclime.jpeg",
+    "https://www.mghabomey.com/2csalon.jpeg"
   ]
 }
 </script>
@@ -135,6 +134,7 @@ header.scrolled{background:rgba(26,26,26,.98);box-shadow:var(--shadow-md)}
 .lightbox-nav:hover{background:rgba(255,255,255,.3)}
 .lightbox-nav.prev{left:1rem}
 .lightbox-nav.next{right:1rem}
+.lightbox-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;padding:.4rem .9rem;border-radius:999px;font-size:.8rem;font-weight:500}
 @media(max-width:640px){.lightbox-nav{width:2.5rem;height:2.5rem;font-size:1.25rem}.lightbox-nav.prev{left:.5rem}.lightbox-nav.next{right:.5rem}}
 .video-wrap{max-width:900px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-2xl);background:#000}
 .video-wrap video{width:100%;display:block}
@@ -279,10 +279,11 @@ footer{background:var(--footer-dark);color:#fff}
   <div class="container">
     <span class="badge-pill">Galerie</span>
     <h1>Photos & Vidéos</h1>
-    <p>Découvrez en images l'ambiance de Mèfinlo Ghouse : nos chambres, notre jardin verdoyant et notre univers paisible à Bohicon-Abomey.</p>
+    <p>Découvrez en images l'ambiance de Mèfinlo Ghouse : nos chambres, notre Jardin Verdoyant et notre univers paisible à Bohicon-Abomey.</p>
   </div>
 </section>
 
+<!-- ================= GALERIE PHOTOS ================= -->
 <section class="section" style="background:var(--bg-light)">
   <div class="container">
     <div class="section-title reveal">
@@ -292,14 +293,16 @@ footer{background:var(--footer-dark);color:#fff}
     </div>
     <div class="filters reveal" id="filters">
       <button class="filter-btn active" data-filter="all">Tout</button>
-      <button class="filter-btn" data-filter="chambres">Chambres</button>
-      <button class="filter-btn" data-filter="exterieur">Extérieur</button>
+      <button class="filter-btn" data-filter="studios">Studios</button>
+      <button class="filter-btn" data-filter="csalon">Chambres-Salon</button>
+      <button class="filter-btn" data-filter="jardin">Jardin Verdoyant</button>
       <button class="filter-btn" data-filter="ambiance">Ambiance</button>
     </div>
     <div class="gallery-grid reveal" id="galleryGrid"></div>
   </div>
 </section>
 
+<!-- ================= VIDÉO ================= -->
 <section class="section" style="background:var(--bg-warm)">
   <div class="container">
     <div class="section-title reveal">
@@ -311,7 +314,7 @@ footer{background:var(--footer-dark);color:#fff}
       <div class="video-badge">🎬 Vidéo de présentation</div>
     </div>
     <div class="video-wrap reveal">
-      <video id="pubVideo" controls autoplay muted loop playsinline preload="metadata" poster="pub-poster.jpg">
+      <video id="pubVideo" controls autoplay muted loop playsinline preload="metadata" poster="jv1.jpeg">
         <source src="pub.mp4" type="video/mp4">
         Votre navigateur ne supporte pas la vidéo.
       </video>
@@ -325,6 +328,7 @@ footer{background:var(--footer-dark);color:#fff}
   </div>
 </section>
 
+<!-- ================= CTA ================= -->
 <section class="section" style="background:#fff">
   <div class="container">
     <div class="section-title reveal">
@@ -373,7 +377,7 @@ footer{background:var(--footer-dark);color:#fff}
             <li><a href="hebergements.html">Studios ventilés</a></li>
             <li><a href="hebergements.html">Studios climatisés</a></li>
             <li><a href="hebergements.html">Chambres-Salon</a></li>
-            <li><a href="hebergements.html">Suite 2 Chambres</a></li>
+            <li><a href="hebergements.html">Suite 2 Chambres-Salon</a></li>
             <li><a href="hebergements.html">Tarifs</a></li>
           </ul>
         </div>
@@ -389,7 +393,7 @@ footer{background:var(--footer-dark);color:#fff}
         <div class="footer-col">
           <h4>Contact</h4>
           <ul class="footer-contact">
-            <li>📍<span>Carrefour Sogbo-Aliho, Von<br>sur le pavé de Djègbè, Bohicon(Abomey)</span></li>
+            <li>📍<span>Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)</span></li>
             <li>📞<a href="tel:+22901678216">01 67 82 16 16</a></li>
             <li>📞<a href="tel:+22901447979">01 44 79 79 01</a></li>
             <li>🕒<span>Ouvert 24h/24 — 7j/7</span></li>
@@ -397,14 +401,14 @@ footer{background:var(--footer-dark);color:#fff}
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Sur le pavé de Djègbè, Bohicon(Abomey), Bénin.</p>
+        <p>© <span id="year"></span> Mèfinlo Ghouse. Tous droits réservés. Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon).</p>
         <div class="footer-social">
           <a href="https://facebook.com/" target="_blank" rel="nofollow noopener" aria-label="Facebook">📘</a>
           <a href="https://instagram.com/" target="_blank" rel="nofollow noopener" aria-label="Instagram">📷</a>
           <a href="https://wa.me/22901678216" target="_blank" rel="nofollow noopener" aria-label="WhatsApp">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           </a>
-          <a href="https://maps.google.com/" target="_blank" rel="nofollow noopener" aria-label="Google Maps">🗺️</a>
+          <a href="https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb" target="_blank" rel="nofollow noopener" aria-label="Google Maps">🗺️</a>
         </div>
       </div>
       <div class="footer-credit">
@@ -454,6 +458,7 @@ footer{background:var(--footer-dark);color:#fff}
   <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Précédent">←</button>
   <img id="lightboxImg" src="" alt="Photo agrandie">
   <button class="lightbox-nav next" id="lightboxNext" aria-label="Suivant">→</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
 </div>
 
 <script>
@@ -464,6 +469,8 @@ footer{background:var(--footer-dark);color:#fff}
   const PHONE1 = '+22901678216';
   const PHONE2 = '+22901447979';
   const WA_FREDY = 'https://wa.me/2290152552106';
+  const MAPS_LINK = 'https://maps.app.goo.gl/kynPE7P5yQE8pQ2a8?g_st=awb';
+  const ADRESSE = "Carrefour Sogbo Aliho, Von en face de la banque de banque sang sur le pavé de Djègbé (entre Abomey et Bohicon)";
 
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -486,27 +493,57 @@ footer{background:var(--footer-dark);color:#fff}
     }));
   }
 
-  // ===== GALERIE =====
+  // ===== GALERIE COMPLÈTE (toutes les photos client) =====
+  const M = 'M%C3%88FINLO%20GHOUSE%20';
   const photos = [
-    { src:'photo1.jpg',  cat:'exterieur', alt:'Vue extérieure Mèfinlo Ghouse',   cap:'Vue extérieure' },
-    { src:'photo2.jpg',  cat:'exterieur', alt:'Jardin verdoyant',                cap:'Jardin verdoyant' },
-    { src:'photo4.jpg',  cat:'chambres',  alt:'Studio Climatisé',                cap:'Studio Climatisé' },
-    { src:'photo5.jpg',  cat:'chambres',  alt:'Chambre-Salon Ventilée',          cap:'Chambre-Salon Ventilée' },
-    { src:'photo6.jpg',  cat:'chambres',  alt:'Studio Ventilé',                  cap:'Studio Ventilé' },
-    { src:'photo7.jpg',  cat:'chambres',  alt:'Chambre-Salon Climatisée',        cap:'Chambre-Salon Climatisée' },
-    { src:'photo8.jpg',  cat:'chambres',  alt:'Suite 2 Chambres-Salon',          cap:'Suite Familiale' },
-    { src:'photo10.jpg', cat:'exterieur', alt:'Espace extérieur',                cap:'Espace extérieur' },
-   
+    // --- Studios ---
+    { src:'sventile.jpeg',           cat:'studios', alt:'Studio Ventilé',                cap:'Studio Ventilé' },
+    { src:'sclime.jpeg',             cat:'studios', alt:'Studio Climatisé',              cap:'Studio Climatisé' },
+    // --- Chambres-Salon ---
+    { src:'csalonventile.jpeg',      cat:'csalon',  alt:'Chambre-Salon Ventilée',        cap:'Chambre-Salon Ventilée' },
+    { src:'csalonclime.jpeg',        cat:'csalon',  alt:'Chambre-Salon Climatisée',      cap:'Chambre-Salon Climatisée' },
+    { src:'2csalon.jpeg',            cat:'csalon',  alt:'Suite 2 Chambres-Salon',        cap:'Suite 2 Chambres-Salon' },
+    // --- Jardin Verdoyant ---
+    { src:'jv1.jpeg',                cat:'jardin',  alt:'Jardin Verdoyant de Mèfinlo Ghouse', cap:'Jardin Verdoyant' },
+    { src:'jv2.jpeg',                cat:'jardin',  alt:'Jardin Verdoyant - vue 2',      cap:'Jardin Verdoyant' },
+    // --- Ambiance & vues (toutes les photos MÈFINLO) ---
+    { src:M+'(3).jpg.jpeg',  cat:'ambiance', alt:'Mèfinlo Ghouse - vue 3',   cap:'Mèfinlo Ghouse' },
+    { src:M+'(4).jpg.jpeg',  cat:'ambiance', alt:'Mèfinlo Ghouse - vue 4',   cap:'Mèfinlo Ghouse' },
+    { src:M+'(5).jpg.jpeg',  cat:'ambiance', alt:'Mèfinlo Ghouse - vue 5',   cap:'Mèfinlo Ghouse' },
+    { src:M+'(6).jpg.jpeg',  cat:'ambiance', alt:'Mèfinlo Ghouse - vue 6',   cap:'Mèfinlo Ghouse' },
+    { src:M+'(7).jpg.jpeg',  cat:'ambiance', alt:'Mèfinlo Ghouse - vue 7',   cap:'Mèfinlo Ghouse' },
+    { src:M+'(8).jpg.jpeg',  cat:'ambiance', alt:'Mèfinlo Ghouse - vue 8',   cap:'Mèfinlo Ghouse' },
+    { src:M+'(9).jpg.jpeg',  cat:'ambiance', alt:'Mèfinlo Ghouse - vue 9',   cap:'Mèfinlo Ghouse' },
+    { src:M+'(10).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 10',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(11).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 11',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(12).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 12',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(13).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 13',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(14).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 14',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(15).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 15',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(16).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 16',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(17).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 17',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(18).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 18',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(20).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 20',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(21).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 21',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(22).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 22',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(23).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 23',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(24).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 24',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(25).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 25',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(26).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 26',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(28).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 28',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(30).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 30',  cap:'Mèfinlo Ghouse' },
+    { src:M+'(31).jpg.jpeg', cat:'ambiance', alt:'Mèfinlo Ghouse - vue 31',  cap:'Mèfinlo Ghouse' }
   ];
 
   const grid = document.getElementById('galleryGrid');
   const filtersEl = document.getElementById('filters');
+  let currentList = photos.slice(); // liste actuellement affichée
 
   const renderGallery = (filter='all') => {
     if (!grid) return;
-    const list = filter === 'all' ? photos : photos.filter(p => p.cat === filter);
-    grid.innerHTML = list.map((p, i) => `
-      <div class="gallery-item" data-index="${photos.indexOf(p)}" role="button" tabindex="0" aria-label="Agrandir ${p.cap}">
+    currentList = filter === 'all' ? photos.slice() : photos.filter(p => p.cat === filter);
+    grid.innerHTML = currentList.map((p, i) => `
+      <div class="gallery-item" data-index="${i}" role="button" tabindex="0" aria-label="Agrandir ${p.cap}">
         <img src="${p.src}" alt="${p.alt}" loading="lazy">
         <span class="gallery-zoom">🔍</span>
         <div class="gallery-caption">${p.cap}</div>
@@ -530,12 +567,17 @@ footer{background:var(--footer-dark);color:#fff}
   const lbClose = document.getElementById('lightboxClose');
   const lbPrev = document.getElementById('lightboxPrev');
   const lbNext = document.getElementById('lightboxNext');
+  const lbCounter = document.getElementById('lightboxCounter');
   let lbIndex = 0;
 
+  const updateCounter = () => {
+    if (lbCounter) lbCounter.textContent = `${lbIndex + 1} / ${currentList.length}`;
+  };
   const openLightbox = (i) => {
     lbIndex = i;
-    lbImg.src = photos[lbIndex].src;
-    lbImg.alt = photos[lbIndex].alt;
+    lbImg.src = currentList[lbIndex].src;
+    lbImg.alt = currentList[lbIndex].alt;
+    updateCounter();
     lb.classList.add('open');
     document.body.style.overflow = 'hidden';
   };
@@ -544,9 +586,11 @@ footer{background:var(--footer-dark);color:#fff}
     document.body.style.overflow = '';
   };
   const navLightbox = (d) => {
-    lbIndex = (lbIndex + d + photos.length) % photos.length;
-    lbImg.src = photos[lbIndex].src;
-    lbImg.alt = photos[lbIndex].alt;
+    if (!currentList.length) return;
+    lbIndex = (lbIndex + d + currentList.length) % currentList.length;
+    lbImg.src = currentList[lbIndex].src;
+    lbImg.alt = currentList[lbIndex].alt;
+    updateCounter();
   };
 
   if (grid) {
@@ -610,20 +654,20 @@ footer{background:var(--footer-dark);color:#fff}
     { keys:['bonjour','salut','bonsoir','hello','coucou','hey','bjr','slt'],
       reply:`Bonjour et bienvenue à Mèfinlo Ghouse 👋\nComment puis-je vous aider ?` },
     { keys:['tarif','prix','coût','cout','combien','fcfa','cfa'],
-      reply:`Voici nos tarifs 💰\n\n• Studio Ventilé : 5 000 FCFA/nuit (2h : 3 000)\n• Studio Climatisé : 8 000 FCFA/nuit (2 nuits : 15 000)\n• Chambre-Salon Ventilée : 10 000 FCFA/nuit (2h : 5 000)\n• Chambre-Salon Climatisée : 15 000 FCFA/nuit (2h : 5 000)\n• Suite 2 Chambres-Salon : 20 000 FCFA/nuit` },
+      reply:`Voici nos tarifs 💰\n\n• Studio Ventilé : 13 000 FCFA/nuitée (détente 3h : 5 000)\n• Studio Climé : 15 000 FCFA/nuitée (2 nuits : 30 000)\n• Chambre-Salon Ventilée ou Climatisée : 13 000 à 20 000 FCFA (détente 3h : 5 000)\n• 02 Chambres-Salon Ventilées ou Climatisées : à partir de 30 000 FCFA/nuitée\n\n📝 NB : Le prix pour une manifestation diffère selon le type d'occupation, et le courant est à la charge du client pour les séjours.` },
     { keys:['réserv','reserv','book','dispo'],
       reply:`Pour réserver, c'est simple ✨\n\n1️⃣ Choisissez votre hébergement\n2️⃣ Indiquez la date et la durée\n3️⃣ Envoyez-nous un message WhatsApp`,
       quick:[{ label:'📱 Réserver', url:`${WHATSAPP}?text=${encodeURIComponent('Bonjour Mèfinlo Ghouse, je souhaite réserver.')}` }] },
-    { keys:['localis','adresse','où','trouv','situé','map','djègbè','bohicon','abomey'],
-      reply:`📍 Carrefour Sogbo-Aliho, Von\nEn face de la Banque de Sang\nSur le pavé de Djègbè, Bohicon-Abomey, Bénin`,
-      quick:[{ label:'🗺️ Google Maps', url:'https://www.google.com/maps/search/?api=1&query=6.3654,2.4183' }] },
+    { keys:['localis','adresse','où','trouv','situé','situe','map','carte','djègbè','bohicon','abomey','sogbo'],
+      reply:`📍 Nous sommes situés :\n${ADRESSE}\n\nOuvert 24h/24 — 7j/7`,
+      quick:[{ label:'🗺️ Google Maps', url:MAPS_LINK }] },
     { keys:['photo','image','galerie','vidéo','video'],
       reply:`🎬 Retrouvez toutes nos photos et notre vidéo de présentation sur cette page !\n\nFaites défiler pour découvrir notre univers.` },
-    { keys:['2h','2 heure','courte','pause'],
-      reply:`Option 2 heures ⏱️\nStudio Ventilé : 3 000 FCFA\nChambre-Salon Ventilée : 5 000 FCFA\nChambre-Salon Climatisée : 5 000 FCFA` },
+    { keys:['3h','3 heure','courte','pause','detente','détente'],
+      reply:`Option détente 3 heures ⏱️ (minimum)\n\n• Studio Ventilé : 5 000 FCFA\n• Chambre-Salon Ventilée ou Climatisée : 5 000 FCFA` },
     { keys:['nuit','nuitée','nuitee','dormir'],
-      reply:`Tarifs nuitée 🌙\nStudio Ventilé : 5 000\nStudio Climatisé : 8 000\nChambre-Salon Ventilée : 10 000\nChambre-Salon Climatisée : 15 000\nSuite Familiale : 20 000 FCFA` },
-    { keys:['contact','téléphone','appel','numéro'],
+      reply:`Tarifs par nuitée 🌙\n\n• Studio Ventilé : 13 000 FCFA\n• Studio Climé : 15 000 FCFA (2 nuits : 30 000)\n• Chambre-Salon Ventilée ou Climatisée : 13 000 à 20 000 FCFA\n• 02 Chambres-Salon : à partir de 30 000 FCFA` },
+    { keys:['contact','téléphone','appel','numéro','numero'],
       reply:`📞 WhatsApp : ${PHONE1}\n📞 Appel : ${PHONE2}`,
       quick:[{ label:'📱 WhatsApp', url:WHATSAPP }] },
     { keys:['horaire','ouvert','heure'],
@@ -631,8 +675,8 @@ footer{background:var(--footer-dark);color:#fff}
     { keys:['sécur','secur','gardien'],
       reply:`Environnement sécurisé 24h/24 🛡️` },
     { keys:['jardin','verdoyant','vert'],
-      reply:`Nous avons un magnifique jardin verdoyant 🌿\nRetrouvez-le en photo dans la galerie !` },
-    { keys:['fréd','fred','fredy','développeur','site'],
+      reply:`Nous avons un magnifique Jardin Verdoyant 🌿\nRetrouvez-le en photo dans la galerie !` },
+    { keys:['fréd','fred','fredy','développeur','developpeur','site'],
       reply:`Ce site a été conçu par Frédy Amoussou 🌐`,
       quick:[{ label:'💻 Contacter Frédy', url:`${WA_FREDY}?text=${encodeURIComponent('Bonjour Frédy, je vous contacte au sujet du site Mèfinlo Ghouse.')}` }] },
     { keys:['merci','super','parfait','ok'],
